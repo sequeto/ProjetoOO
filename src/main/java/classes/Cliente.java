@@ -15,10 +15,17 @@ public class Cliente {
     private String nome;
     private String telefone;
     private String cpf;
+    int reservas;
     
     public Cliente(String nome, String cpf, String telefone){
         this.nome = nome;
         this.cpf = cpf;
         this.telefone = telefone;
+        reservas = 0;
     } 
+    
+    public void reserva()
+    {
+        this.reservas = this.reservas + 1;
+    }
 }
