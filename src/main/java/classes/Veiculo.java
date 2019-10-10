@@ -16,6 +16,22 @@ public class Veiculo {
     private String modelo;
     private String cor;
     private int ano;
+
+    public String getPlaca(){
+        return this.placa;
+    }
+
+    public String getModelo(){
+        return this.modelo;
+    }
+
+    public String getCor(){
+        return this.cor;
+    }
+
+    public int getAno(){
+        return this.ano;
+    }
     
     public Veiculo(String placa, String modelo, String cor, int ano)
     {

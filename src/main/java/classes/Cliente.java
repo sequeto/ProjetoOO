@@ -15,7 +15,7 @@ public class Cliente {
     private String nome;
     private String telefone;
     private String cpf;
-    int reservas;
+    public  static int reservas;
     
     public Cliente(String nome, String cpf, String telefone){
         this.nome = nome;
@@ -27,5 +27,21 @@ public class Cliente {
     public void reserva()
     {
         this.reservas = this.reservas + 1;
+    }
+
+    public String getNome(){
+        return this->nome;
+    }
+
+    public String getTelefone(){
+        return this->telefone;
+    }
+
+    public String getCpf(){
+        return this->cpf;
+    }
+
+    public int getReservas(){
+        return this->reservas;
     }
 }
