@@ -12,7 +12,12 @@ package classes;
 public class ClienteJuridico extends Cliente{
     private String cnpj;
 
-    public ClienteJuridico(String nome, String telefone) {
+    public ClienteJuridico(String nome, String telefone, String cnpj) {
         super(nome, telefone);
+        this.cnpj = cnpj;
+    }
+    
+    public String getCNPJ(){
+        return this.cnpj;
     }
 }

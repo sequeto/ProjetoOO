@@ -12,8 +12,13 @@ package classes;
 public class ClienteFisico extends Cliente{
      private String cpf;
 
-    public ClienteFisico(String nome, String telefone) {
+    public ClienteFisico(String nome, String telefone, String cpf) {
         super(nome, telefone);
+        this.cpf = cpf;
+    }
+    
+    public String getCPF(){
+        return this.cpf;
     }
     
 }
