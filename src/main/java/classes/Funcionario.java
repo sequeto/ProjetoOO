@@ -11,16 +11,9 @@ import java.util.*;
  *
  * @author ice
  */
-public class ClienteFisico extends Cliente{
-     private String cpf;
-
-    public ClienteFisico(String nome, String telefone, String cpf) {
-        super(nome, telefone);
-        this.cpf = cpf;
-    }
+public class Funcionario extends Usuario{
     
-    public String getCPF(){
-        return this.cpf;
+    public Funcionario(String nome, String cpf, String login, String senha, String tipo, String identificacao) {
+        super(nome, cpf, login, senha, tipo, identificacao);
     }
-    
 }
