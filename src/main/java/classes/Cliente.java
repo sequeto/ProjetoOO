@@ -14,12 +14,10 @@ import java.util.*;
 public class Cliente {
     private String nome;
     private String telefone;
-    private String cpf;
     public  static int reservas;
     
-    public Cliente(String nome, String cpf, String telefone){
+    public Cliente(String nome, String telefone){
         this.nome = nome;
-        this.cpf = cpf;
         this.telefone = telefone;
         reservas = 0;
     } 
@@ -30,18 +28,14 @@ public class Cliente {
     }
 
     public String getNome(){
-        return this->nome;
+        return this.nome;
     }
 
     public String getTelefone(){
-        return this->telefone;
-    }
-
-    public String getCpf(){
-        return this->cpf;
+        return this.telefone;
     }
 
     public int getReservas(){
-        return this->reservas;
+        return this.reservas;
     }
 }
