@@ -10,5 +10,13 @@ package classes;
  * @author ice
  */
 public class Usuario {
-    private String nome;
+    private String login;
+    private String senha;
+    private String Tipo;
+    
+    public Usuario(String login, String senha, String tipo){
+        this.login = login;
+        this.senha = senha;
+        this.Tipo = tipo;
+    }
 }
