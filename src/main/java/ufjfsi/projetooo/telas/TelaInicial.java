@@ -40,6 +40,12 @@ public class TelaInicial extends javax.swing.JFrame {
 
         jLabelSenha.setText("Senha");
 
+        jTextFieldLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldLoginActionPerformed(evt);
+            }
+        });
+
         jButtonEntrar.setText("Entrar");
 
         jButtonSair.setText("Sair");
@@ -84,6 +90,10 @@ public class TelaInicial extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jTextFieldLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldLoginActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldLoginActionPerformed
 
     /**
      * @param args the command line arguments

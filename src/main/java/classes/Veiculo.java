@@ -17,6 +17,14 @@ public class Veiculo {
     private String cor;
     private int ano;
 
+    public Veiculo(String placa, String modelo, String cor, int ano)
+    {
+        this.placa = placa;
+        this.modelo = modelo;
+        this.cor = cor;
+        this.ano = ano;
+    }
+    
     public String getPlaca(){
         return this.placa;
     }
@@ -31,13 +39,5 @@ public class Veiculo {
 
     public int getAno(){
         return this.ano;
-    }
-    
-    public Veiculo(String placa, String modelo, String cor, int ano)
-    {
-        this.placa = placa;
-        this.modelo = modelo;
-        this.cor = cor;
-        this.ano = ano;
     }
 }

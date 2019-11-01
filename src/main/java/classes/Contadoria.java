@@ -9,10 +9,8 @@ package classes;
  *
  * @author ice
  */
-public class Caixa {
-    private static double caixa;
+
+// Classe que controla valores do sistema.
+public class Contadoria {
     
-    public Caixa(double valor){
-        this.caixa = caixa;
-    }
 }
