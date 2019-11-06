@@ -11,4 +11,11 @@ package classes;
  */
 public class ReservaAno extends Reserva{
     
+    public ReservaAno(ClienteFisico cliente, int periodo, Veiculo veiculo, double valor) {
+        super(cliente, periodo, veiculo, valor);
+    }
+    
+    public ReservaAno(ClienteJuridico cliente, int periodo, Veiculo veiculo, double valor) {
+        super(cliente, periodo, veiculo, valor);
+    }
 }

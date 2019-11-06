@@ -23,4 +23,7 @@ public class ClienteFisico extends Cliente{
         return this.cpf;
     }
     
+    public void setCPF(String cpf){
+        this.cpf = cpf;
+    }
 }

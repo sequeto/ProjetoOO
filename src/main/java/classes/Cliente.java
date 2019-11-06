@@ -38,4 +38,12 @@ public class Cliente {
     public int getReservas(){
         return this.reservas;
     }
+    
+    public void setNome(String nome){
+        this.nome = nome;
+    }
+
+    public void setTelefone(String telefone){
+        this.telefone = telefone;
+    }
 }

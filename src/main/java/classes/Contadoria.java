@@ -12,5 +12,50 @@ package classes;
 
 // Classe que controla valores do sistema.
 public class Contadoria {
+    private double valorCaixaInicial;
+    private double valorCaixaFinal;
+    private double lucro;
+    private double prejuizo;
+    
+    public Contadoria(){
+        this.valorCaixaInicial = 0;
+        this.valorCaixaFinal = 0;
+        this.lucro = 0;
+        this.prejuizo = 0;
+    }
+
+    // Getters e Setters
+    public double getValorCaixaInicial() {
+        return valorCaixaInicial;
+    }
+
+    public void setValorCaixaInicial(double valorCaixaInicial) {
+        this.valorCaixaInicial = valorCaixaInicial;
+    }
+
+    public double getValorCaixaFinal() {
+        return valorCaixaFinal;
+    }
+
+    public void setValorCaixaFinal(double valorCaixaFinal) {
+        this.valorCaixaFinal = valorCaixaFinal;
+    }
+
+    public double getLucro() {
+        return lucro;
+    }
+
+    public void setLucro(double lucro) {
+        this.lucro = lucro;
+    }
+
+    public double getPrejuizo() {
+        return prejuizo;
+    }
+
+    public void setPrejuizo(double prejuizo) {
+        this.prejuizo = prejuizo;
+    }
+    
     
 }

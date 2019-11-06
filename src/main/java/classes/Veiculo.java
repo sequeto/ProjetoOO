@@ -25,19 +25,38 @@ public class Veiculo {
         this.ano = ano;
     }
     
-    public String getPlaca(){
-        return this.placa;
+    // Getters e Setters
+    public String getPlaca() {
+        return placa;
     }
 
-    public String getModelo(){
-        return this.modelo;
+    public void setPlaca(String placa) {
+        this.placa = placa;
     }
 
-    public String getCor(){
-        return this.cor;
+    public String getModelo() {
+        return modelo;
     }
 
-    public int getAno(){
-        return this.ano;
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
     }
+
+    public String getCor() {
+        return cor;
+    }
+
+    public void setCor(String cor) {
+        this.cor = cor;
+    }
+
+    public int getAno() {
+        return ano;
+    }
+
+    public void setAno(int ano) {
+        this.ano = ano;
+    }
+    
+    
 }

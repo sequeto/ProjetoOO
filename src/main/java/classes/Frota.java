@@ -17,5 +17,12 @@ public class Frota {
     public Frota(){
         this.frota = new ArrayList();
     }
-    
+
+    public List<Veiculo> getFrota() {
+        return frota;
+    }
+
+    public void setFrota(List<Veiculo> frota) {
+        this.frota = frota;
+    }
 }
