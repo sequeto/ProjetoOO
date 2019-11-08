@@ -16,13 +16,25 @@ public class Veiculo {
     private String modelo;
     private String cor;
     private int ano;
+    private boolean alugado;
 
-    public Veiculo(String placa, String modelo, String cor, int ano)
+    public Veiculo(String placa, String modelo, String cor, int ano, boolean alugado)
     {
         this.placa = placa;
         this.modelo = modelo;
         this.cor = cor;
         this.ano = ano;
+        this.alugado = alugado;
+    }
+
+    
+    // Getters e Setters
+    public boolean getAlugado() {
+        return alugado;
+    }
+
+    public void setAlugado(boolean alugado) {
+        this.alugado = alugado;
     }
     
     // Getters e Setters
