@@ -27,17 +27,94 @@ public class TelaFrota extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanelListVeic = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jListListaVeic = new javax.swing.JList<>();
+        jPanelAcoesVeic = new javax.swing.JPanel();
+        jButtonCadastrarVeic = new javax.swing.JButton();
+        jButtonEditVeic = new javax.swing.JButton();
+        jButtonExcluirVeic = new javax.swing.JButton();
+        jButtonVoltarFrota = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jListListaVeic.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane1.setViewportView(jListListaVeic);
+
+        javax.swing.GroupLayout jPanelListVeicLayout = new javax.swing.GroupLayout(jPanelListVeic);
+        jPanelListVeic.setLayout(jPanelListVeicLayout);
+        jPanelListVeicLayout.setHorizontalGroup(
+            jPanelListVeicLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelListVeicLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 171, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jPanelListVeicLayout.setVerticalGroup(
+            jPanelListVeicLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelListVeicLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1)
+                .addContainerGap())
+        );
+
+        jButtonCadastrarVeic.setText("Cadastrar");
+
+        jButtonEditVeic.setText("Editar");
+
+        jButtonExcluirVeic.setText("Excluir");
+
+        jButtonVoltarFrota.setText("         ");
+
+        javax.swing.GroupLayout jPanelAcoesVeicLayout = new javax.swing.GroupLayout(jPanelAcoesVeic);
+        jPanelAcoesVeic.setLayout(jPanelAcoesVeicLayout);
+        jPanelAcoesVeicLayout.setHorizontalGroup(
+            jPanelAcoesVeicLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelAcoesVeicLayout.createSequentialGroup()
+                .addGroup(jPanelAcoesVeicLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButtonCadastrarVeic, javax.swing.GroupLayout.DEFAULT_SIZE, 215, Short.MAX_VALUE)
+                    .addComponent(jButtonEditVeic, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButtonExcluirVeic, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButtonVoltarFrota, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        jPanelAcoesVeicLayout.setVerticalGroup(
+            jPanelAcoesVeicLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelAcoesVeicLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jButtonCadastrarVeic)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButtonEditVeic)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButtonExcluirVeic)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 165, Short.MAX_VALUE)
+                .addComponent(jButtonVoltarFrota)
+                .addContainerGap())
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanelListVeic, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jPanelAcoesVeic, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanelListVeic, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanelAcoesVeic, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         pack();
@@ -79,5 +156,13 @@ public class TelaFrota extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButtonCadastrarVeic;
+    private javax.swing.JButton jButtonEditVeic;
+    private javax.swing.JButton jButtonExcluirVeic;
+    private javax.swing.JButton jButtonVoltarFrota;
+    private javax.swing.JList<String> jListListaVeic;
+    private javax.swing.JPanel jPanelAcoesVeic;
+    private javax.swing.JPanel jPanelListVeic;
+    private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }

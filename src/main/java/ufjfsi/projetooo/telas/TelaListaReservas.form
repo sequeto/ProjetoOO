@@ -24,36 +24,32 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
+              <Component id="jPanelReserva" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jPanelListVeic" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="jPanelAcoesVeic" max="32767" attributes="0"/>
+              <Component id="jPanel1" max="32767" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
+          <Component id="jPanelReserva" max="32767" attributes="0"/>
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jPanelListVeic" max="32767" attributes="0"/>
-                  <Component id="jPanelAcoesVeic" max="32767" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jPanel1" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Container class="javax.swing.JPanel" name="jPanelListVeic">
+    <Container class="javax.swing.JPanel" name="jPanelReserva">
 
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jScrollPane1" pref="171" max="32767" attributes="0"/>
+                  <Component id="jScrollPane1" pref="199" max="32767" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -76,7 +72,7 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JList" name="jListListaVeic">
+            <Component class="javax.swing.JList" name="jListListaDeReserva">
               <Properties>
                 <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
                   <StringArray count="5">
@@ -96,17 +92,18 @@
         </Container>
       </SubComponents>
     </Container>
-    <Container class="javax.swing.JPanel" name="jPanelAcoesVeic">
+    <Container class="javax.swing.JPanel" name="jPanel1">
 
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jButtonCadastrarVeic" pref="215" max="32767" attributes="0"/>
-                      <Component id="jButtonEditVeic" max="32767" attributes="0"/>
-                      <Component id="jButtonExcluirVeic" alignment="0" max="32767" attributes="0"/>
-                      <Component id="jButtonVoltarFrota" alignment="0" max="32767" attributes="0"/>
+                      <Component id="jButtonRealizarReserva" max="32767" attributes="0"/>
+                      <Component id="jButtonEditarReserva" max="32767" attributes="0"/>
+                      <Component id="jButton1" alignment="0" pref="289" max="32767" attributes="0"/>
+                      <Component id="jButton2" alignment="0" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -116,37 +113,37 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jButtonCadastrarVeic" min="-2" max="-2" attributes="0"/>
+                  <Component id="jButtonRealizarReserva" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jButtonEditVeic" min="-2" max="-2" attributes="0"/>
+                  <Component id="jButtonEditarReserva" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jButtonExcluirVeic" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="165" max="32767" attributes="0"/>
-                  <Component id="jButtonVoltarFrota" min="-2" max="-2" attributes="0"/>
+                  <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="252" max="32767" attributes="0"/>
+                  <Component id="jButton2" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JButton" name="jButtonCadastrarVeic">
+        <Component class="javax.swing.JButton" name="jButtonRealizarReserva">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Cadastrar"/>
+            <Property name="text" type="java.lang.String" value="Reservar"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButtonEditVeic">
+        <Component class="javax.swing.JButton" name="jButtonEditarReserva">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Editar"/>
+            <Property name="text" type="java.lang.String" value="Editar Reserva"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButtonExcluirVeic">
+        <Component class="javax.swing.JButton" name="jButton1">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Excluir"/>
+            <Property name="text" type="java.lang.String" value="Excluir Reserva"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButtonVoltarFrota">
+        <Component class="javax.swing.JButton" name="jButton2">
           <Properties>
-            <Property name="text" type="java.lang.String" value="         "/>
+            <Property name="text" type="java.lang.String" value="Voltar"/>
           </Properties>
         </Component>
       </SubComponents>
