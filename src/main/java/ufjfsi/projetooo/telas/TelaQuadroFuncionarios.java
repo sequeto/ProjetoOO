@@ -77,6 +77,11 @@ public class TelaQuadroFuncionarios extends javax.swing.JFrame {
         jButtonEditFunc.setText("Editar");
 
         jButtonExcluirFunc.setText("Excluir");
+        jButtonExcluirFunc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonExcluirFuncActionPerformed(evt);
+            }
+        });
 
         jButtonVoltarFunc.setText("Voltar");
 
@@ -132,6 +137,10 @@ public class TelaQuadroFuncionarios extends javax.swing.JFrame {
         tela.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         tela.setVisible(true);
     }//GEN-LAST:event_jButtonCadastrarFuncActionPerformed
+
+    private void jButtonExcluirFuncActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonExcluirFuncActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonExcluirFuncActionPerformed
 
     /**
      * @param args the command line arguments

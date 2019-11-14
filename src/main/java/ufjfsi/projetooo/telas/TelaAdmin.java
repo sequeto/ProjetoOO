@@ -122,19 +122,27 @@ public class TelaAdmin extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonFinancasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonFinancasActionPerformed
-        // TODO add your handling code here:
+        TelaContadoria telaC = new TelaContadoria();
+        telaC.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        telaC.setVisible(true);
     }//GEN-LAST:event_jButtonFinancasActionPerformed
 
     private void jButtonClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonClientesActionPerformed
-        // TODO add your handling code here:
+        TelalistaClientes telaLC = new TelalistaClientes();
+        telaLC.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        telaLC.setVisible(true);
     }//GEN-LAST:event_jButtonClientesActionPerformed
 
     private void jButtonVeiculosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVeiculosActionPerformed
-        // TODO add your handling code here:
+        TelaFrota telaF = new TelaFrota();
+        telaF.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        telaF.setVisible(true);
     }//GEN-LAST:event_jButtonVeiculosActionPerformed
 
     private void jButtonFuncionariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonFuncionariosActionPerformed
-        // TODO add your handling code here:
+        TelaQuadroFuncionarios telaQF = new TelaQuadroFuncionarios();
+        telaQF.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        telaQF.setVisible(true);
     }//GEN-LAST:event_jButtonFuncionariosActionPerformed
 
     /**
