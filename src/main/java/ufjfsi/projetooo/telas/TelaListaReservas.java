@@ -37,8 +37,8 @@ public class TelaListaReservas extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jButtonRealizarReserva = new javax.swing.JButton();
         jButtonEditarReserva = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        jButtonExcluirReserva = new javax.swing.JButton();
+        jButtonVoltar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -73,10 +73,25 @@ public class TelaListaReservas extends javax.swing.JFrame {
         });
 
         jButtonEditarReserva.setText("Editar Reserva");
+        jButtonEditarReserva.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonEditarReservaActionPerformed(evt);
+            }
+        });
 
-        jButton1.setText("Excluir Reserva");
+        jButtonExcluirReserva.setText("Excluir Reserva");
+        jButtonExcluirReserva.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonExcluirReservaActionPerformed(evt);
+            }
+        });
 
-        jButton2.setText("Voltar");
+        jButtonVoltar.setText("Voltar");
+        jButtonVoltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonVoltarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -87,8 +102,8 @@ public class TelaListaReservas extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButtonRealizarReserva, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButtonEditarReserva, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 289, Short.MAX_VALUE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jButtonExcluirReserva, javax.swing.GroupLayout.DEFAULT_SIZE, 289, Short.MAX_VALUE)
+                    .addComponent(jButtonVoltar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -98,9 +113,9 @@ public class TelaListaReservas extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButtonEditarReserva)
                 .addGap(12, 12, 12)
-                .addComponent(jButton1)
+                .addComponent(jButtonExcluirReserva)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 252, Short.MAX_VALUE)
-                .addComponent(jButton2)
+                .addComponent(jButtonVoltar)
                 .addContainerGap())
         );
 
@@ -126,8 +141,22 @@ public class TelaListaReservas extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonRealizarReservaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRealizarReservaActionPerformed
-        // TODO add your handling code here:
+        TelaReserva telaRes = new TelaReserva();
+        telaRes.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        telaRes.setVisible(true);
     }//GEN-LAST:event_jButtonRealizarReservaActionPerformed
+
+    private void jButtonVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVoltarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonVoltarActionPerformed
+
+    private void jButtonEditarReservaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEditarReservaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonEditarReservaActionPerformed
+
+    private void jButtonExcluirReservaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonExcluirReservaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonExcluirReservaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -165,10 +194,10 @@ public class TelaListaReservas extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButtonEditarReserva;
+    private javax.swing.JButton jButtonExcluirReserva;
     private javax.swing.JButton jButtonRealizarReserva;
+    private javax.swing.JButton jButtonVoltar;
     private javax.swing.JList<String> jListListaDeReserva;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanelReserva;

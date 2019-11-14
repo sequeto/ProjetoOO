@@ -67,10 +67,25 @@ public class TelaFrota extends javax.swing.JFrame {
         );
 
         jButtonCadastrarVeic.setText("Cadastrar");
+        jButtonCadastrarVeic.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCadastrarVeicActionPerformed(evt);
+            }
+        });
 
         jButtonEditVeic.setText("Editar");
+        jButtonEditVeic.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonEditVeicActionPerformed(evt);
+            }
+        });
 
         jButtonExcluirVeic.setText("Excluir");
+        jButtonExcluirVeic.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonExcluirVeicActionPerformed(evt);
+            }
+        });
 
         jButtonVoltarFrota.setText("         ");
 
@@ -123,6 +138,20 @@ public class TelaFrota extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButtonCadastrarVeicActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCadastrarVeicActionPerformed
+        TelaCadastroVeiculo telaCadV = new TelaCadastroVeiculo();
+        telaCadV.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        telaCadV.setVisible(true);
+    }//GEN-LAST:event_jButtonCadastrarVeicActionPerformed
+
+    private void jButtonEditVeicActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEditVeicActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonEditVeicActionPerformed
+
+    private void jButtonExcluirVeicActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonExcluirVeicActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonExcluirVeicActionPerformed
 
     /**
      * @param args the command line arguments

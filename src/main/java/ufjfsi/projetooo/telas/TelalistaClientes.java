@@ -31,20 +31,35 @@ public class TelalistaClientes extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        jButtonCadastroCliente = new javax.swing.JButton();
+        jButtonRemocaoCliente = new javax.swing.JButton();
+        jButtonEdicaoCliente = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         list1 = new java.awt.List();
         label1 = new java.awt.Label();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButton1.setText("Cadastrar");
+        jButtonCadastroCliente.setText("Cadastrar");
+        jButtonCadastroCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCadastroClienteActionPerformed(evt);
+            }
+        });
 
-        jButton2.setText("Remover");
+        jButtonRemocaoCliente.setText("Remover");
+        jButtonRemocaoCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonRemocaoClienteActionPerformed(evt);
+            }
+        });
 
-        jButton3.setText("Editar");
+        jButtonEdicaoCliente.setText("Editar");
+        jButtonEdicaoCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonEdicaoClienteActionPerformed(evt);
+            }
+        });
 
         jButton4.setText("Voltar");
 
@@ -63,10 +78,10 @@ public class TelalistaClientes extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButtonEdicaoCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jButton2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 108, Short.MAX_VALUE)))))
+                                .addComponent(jButtonRemocaoCliente, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jButtonCadastroCliente, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 108, Short.MAX_VALUE)))))
                 .addContainerGap(48, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -77,11 +92,11 @@ public class TelalistaClientes extends javax.swing.JFrame {
                 .addGap(9, 9, 9)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton1)
+                        .addComponent(jButtonCadastroCliente)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton2)
+                        .addComponent(jButtonRemocaoCliente)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton3)
+                        .addComponent(jButtonEdicaoCliente)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButton4))
                     .addComponent(list1, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -90,6 +105,20 @@ public class TelalistaClientes extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButtonCadastroClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCadastroClienteActionPerformed
+        TelaCadastroCliente telaCad = new TelaCadastroCliente();
+        telaCad.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        telaCad.setVisible(true);
+    }//GEN-LAST:event_jButtonCadastroClienteActionPerformed
+
+    private void jButtonRemocaoClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRemocaoClienteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonRemocaoClienteActionPerformed
+
+    private void jButtonEdicaoClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEdicaoClienteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonEdicaoClienteActionPerformed
 
     /**
      * @param args the command line arguments
@@ -127,10 +156,10 @@ public class TelalistaClientes extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButtonCadastroCliente;
+    private javax.swing.JButton jButtonEdicaoCliente;
+    private javax.swing.JButton jButtonRemocaoCliente;
     private java.awt.Label label1;
     private java.awt.List list1;
     // End of variables declaration//GEN-END:variables

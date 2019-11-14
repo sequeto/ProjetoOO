@@ -101,8 +101,8 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="jButtonRealizarReserva" max="32767" attributes="0"/>
                       <Component id="jButtonEditarReserva" max="32767" attributes="0"/>
-                      <Component id="jButton1" alignment="0" pref="289" max="32767" attributes="0"/>
-                      <Component id="jButton2" alignment="0" max="32767" attributes="0"/>
+                      <Component id="jButtonExcluirReserva" alignment="0" pref="289" max="32767" attributes="0"/>
+                      <Component id="jButtonVoltar" alignment="0" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -115,9 +115,9 @@
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="jButtonEditarReserva" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                  <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                  <Component id="jButtonExcluirReserva" min="-2" max="-2" attributes="0"/>
                   <EmptySpace pref="252" max="32767" attributes="0"/>
-                  <Component id="jButton2" min="-2" max="-2" attributes="0"/>
+                  <Component id="jButtonVoltar" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -136,16 +136,25 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Editar Reserva"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonEditarReservaActionPerformed"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton1">
+        <Component class="javax.swing.JButton" name="jButtonExcluirReserva">
           <Properties>
             <Property name="text" type="java.lang.String" value="Excluir Reserva"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonExcluirReservaActionPerformed"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton2">
+        <Component class="javax.swing.JButton" name="jButtonVoltar">
           <Properties>
             <Property name="text" type="java.lang.String" value="Voltar"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonVoltarActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
