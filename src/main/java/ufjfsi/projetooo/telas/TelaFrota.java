@@ -6,8 +6,12 @@
 package ufjfsi.projetooo.telas;
 
 /**
- *
- * @author ice
+ * Grupo: 
+    * Nome - Matrícula:
+    * Milles Joseph Magalhães - 20177626
+    * Joan Gustavo Melo Fortes – 201435005
+    * Guilherme Soares Frias – 201535042
+    * João Pedro Sequeto Nascimento – 201776022
  */
 public class TelaFrota extends javax.swing.JFrame {
 

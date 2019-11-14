@@ -8,8 +8,12 @@ import java.lang.*;
 import java.util.*;
 
 /**
- *
- * @author Sequeto
+ * Grupo: 
+    * Nome - Matrícula:
+    * Milles Joseph Magalhães - 20177626
+    * Joan Gustavo Melo Fortes – 201435005
+    * Guilherme Soares Frias – 201535042
+    * João Pedro Sequeto Nascimento – 201776022
  */
 public class Veiculo {
     private String placa;

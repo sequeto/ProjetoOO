@@ -8,8 +8,12 @@ package ufjfsi.projetooo.telas;
 import javax.swing.JFrame;
 
 /**
- *
- * @author ice
+ * Grupo: 
+    * Nome - Matrícula:
+    * Milles Joseph Magalhães - 20177626
+    * Joan Gustavo Melo Fortes – 201435005
+    * Guilherme Soares Frias – 201535042
+    * João Pedro Sequeto Nascimento – 201776022
  */
 public class TelaQuadroFuncionarios extends javax.swing.JFrame {
 
@@ -88,11 +92,10 @@ public class TelaQuadroFuncionarios extends javax.swing.JFrame {
         jPanelAcoesFuncLayout.setVerticalGroup(
             jPanelAcoesFuncLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelAcoesFuncLayout.createSequentialGroup()
-                .addContainerGap()
                 .addComponent(jButtonCadastrarFunc)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(15, 15, 15)
                 .addComponent(jButtonEditFunc)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(jButtonExcluirFunc)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 160, Short.MAX_VALUE)
                 .addComponent(jButtonVoltarFunc)
