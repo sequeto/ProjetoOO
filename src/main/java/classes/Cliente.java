@@ -11,7 +11,7 @@ import java.util.*;
  *
  * @author Sequeto
  */
-public class Cliente {
+public abstract class Cliente {
     private String nome;
     private String telefone;
     public  static int reservas;

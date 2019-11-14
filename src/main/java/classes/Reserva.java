@@ -9,7 +9,7 @@ package classes;
  *
  * @author ice
  */
-public class Reserva {
+public abstract class Reserva {
     private ClienteFisico clienteFis;
     private ClienteJuridico clienteJur;
     private int periodo;
