@@ -16,7 +16,6 @@ import java.util.*;
     * João Pedro Sequeto Nascimento – 201776022
  */
 public class Administrador extends Usuario{
-
     public Administrador(String nome, String cpf, String login, String senha, String tipo, String identificacao) {
         super(nome, cpf, login, senha, tipo, identificacao);
     }

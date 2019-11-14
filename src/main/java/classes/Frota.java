@@ -33,4 +33,12 @@ public class Frota {
     public void adicionaVeiculo(Veiculo carro){
         this.frota.add(carro);
     }
+    
+    public void excluiVeiculo(String placa){
+        for(int i = 0; i < frota.size(); i++){
+             if(frota.get(i).getPlaca().equals(placa)){
+                frota.remove(i);
+             }
+         }
+    }
 }

@@ -66,6 +66,11 @@ public class TelaListaReservas extends javax.swing.JFrame {
         );
 
         jButtonRealizarReserva.setText("Reservar");
+        jButtonRealizarReserva.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonRealizarReservaActionPerformed(evt);
+            }
+        });
 
         jButtonEditarReserva.setText("Editar Reserva");
 
@@ -119,6 +124,10 @@ public class TelaListaReservas extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButtonRealizarReservaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRealizarReservaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonRealizarReservaActionPerformed
 
     /**
      * @param args the command line arguments
