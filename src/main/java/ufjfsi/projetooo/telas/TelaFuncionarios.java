@@ -34,7 +34,7 @@ public class TelaFuncionarios extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jButtonFuncClientes = new javax.swing.JButton();
         jButtonFuncVeiculos = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        jButtonReservas = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -47,8 +47,18 @@ public class TelaFuncionarios extends javax.swing.JFrame {
         });
 
         jButtonFuncVeiculos.setText("Veículos");
+        jButtonFuncVeiculos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonFuncVeiculosActionPerformed(evt);
+            }
+        });
 
-        jButton1.setText("Reserva");
+        jButtonReservas.setText("Reserva");
+        jButtonReservas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonReservasActionPerformed(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Serif", 1, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -67,7 +77,7 @@ public class TelaFuncionarios extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButtonFuncVeiculos)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jButtonReservas, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(15, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -79,7 +89,7 @@ public class TelaFuncionarios extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonFuncClientes)
                     .addComponent(jButtonFuncVeiculos)
-                    .addComponent(jButton1))
+                    .addComponent(jButtonReservas))
                 .addGap(53, 53, 53))
         );
 
@@ -104,8 +114,22 @@ public class TelaFuncionarios extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonFuncClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonFuncClientesActionPerformed
-        // TODO add your handling code here:
+        TelalistaClientes telaLCF = new TelalistaClientes();
+        telaLCF.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        telaLCF.setVisible(true);
     }//GEN-LAST:event_jButtonFuncClientesActionPerformed
+
+    private void jButtonReservasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonReservasActionPerformed
+        TelaListaReservas telaR = new TelaListaReservas();
+        telaR.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        telaR.setVisible(true);
+    }//GEN-LAST:event_jButtonReservasActionPerformed
+
+    private void jButtonFuncVeiculosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonFuncVeiculosActionPerformed
+        TelaFrota telaFF = new TelaFrota();
+        telaFF.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        telaFF.setVisible(true);
+    }//GEN-LAST:event_jButtonFuncVeiculosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -143,9 +167,9 @@ public class TelaFuncionarios extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButtonFuncClientes;
     private javax.swing.JButton jButtonFuncVeiculos;
+    private javax.swing.JButton jButtonReservas;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
