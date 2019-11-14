@@ -48,18 +48,18 @@ public class Contadoria {
     public double getLucro() {
         return lucro;
     }
-
-    public void setLucro(double lucro) {
-        this.lucro = lucro;
-    }
-
+    
     public double getPrejuizo() {
         return prejuizo;
     }
-
-    public void setPrejuizo(double prejuizo) {
-        this.prejuizo = prejuizo;
+    
+    public void calculaLucro(){
+        if(this.valorCaixaInicial < this.valorCaixaFinal){
+            this.lucro = this.valorCaixaFinal - this.valorCaixaInicial;
+        }
+        
+        else{
+            this.prejuizo = this.valorCaixaFinal - this.valorCaixaInicial;
+        }
     }
-    
-    
 }

@@ -21,5 +21,12 @@ public class ReservaMes extends Reserva{
     
     public ReservaMes(ClienteJuridico cliente, int periodo, Veiculo veiculo, double valor) {
         super(cliente, periodo, veiculo, valor);
-    } 
+    }
+    
+    @Override
+    public double calculaValor(){
+        double valor = this.getPeriodo() * ((this.getValor()*10)/100); // 10% desconto para mensal.
+        this.setValor(valor);
+        return valor;
+    }
 }

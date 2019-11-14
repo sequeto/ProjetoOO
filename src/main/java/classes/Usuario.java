@@ -83,4 +83,8 @@ public abstract class Usuario {
     public void setId(String id){
         this.identificacao = id;
     }
+    
+    public void verificaUsuario(){
+        
+    }
 }

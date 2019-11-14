@@ -21,5 +21,13 @@ public class ReservaDia extends Reserva{
     
     public ReservaDia(ClienteJuridico cliente, int periodo, Veiculo veiculo, double valor) {
         super(cliente, periodo, veiculo, valor);
-    }   
+    }
+    
+    @Override
+    public double calculaValor(){
+        double valor = this.getPeriodo() * this.getValor();
+        this.setValor(valor);
+        return valor;
+    }
+    
 }

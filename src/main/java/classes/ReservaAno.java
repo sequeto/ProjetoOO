@@ -22,4 +22,11 @@ public class ReservaAno extends Reserva{
     public ReservaAno(ClienteJuridico cliente, int periodo, Veiculo veiculo, double valor) {
         super(cliente, periodo, veiculo, valor);
     }
+    
+    @Override
+    public double calculaValor(){
+        double valor = this.getPeriodo() * ((this.getValor()*30)/100); // 30% desconto para anual.
+        this.setValor(valor);
+        return valor;
+    }
 }

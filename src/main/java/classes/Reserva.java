@@ -34,6 +34,8 @@ public abstract class Reserva {
             this.veiculo = veiculo;
             this.valor = valor;
         }
+        
+        public abstract double calculaValor();
 
         // Getters e Setters
         public ClienteFisico getClienteFis() {

@@ -29,4 +29,8 @@ public class Frota {
     public void setFrota(List<Veiculo> frota) {
         this.frota = frota;
     }
+    
+    public void adicionaVeiculo(Veiculo carro){
+        this.frota.add(carro);
+    }
 }
