@@ -16,13 +16,14 @@ import javax.swing.JFrame;
     * João Pedro Sequeto Nascimento – 201776022
  */
 public class TelaCadastroCliente extends javax.swing.JFrame {
-    QuadroClientes quadro = new QuadroClientes();
+    private QuadroClientes quadro;
 
     /**
      * Creates new form TelaCadastroCliente
      */
     public TelaCadastroCliente() {
         initComponents();
+        this.quadro = new QuadroClientes();
     }
 
     /**
@@ -186,7 +187,7 @@ public class TelaCadastroCliente extends javax.swing.JFrame {
             cliente.setNome(jTextFieldNomeC.getText());
             cliente.setTelefone(jTextFieldTelefoneC.getText());
             cliente.setCPF(jTextFieldCpfCnpj.getText());
-            quadro.cadastraClienteFisico(cliente);
+            this.quadro.cadastraClienteFisico(cliente);
         }
         
         else
@@ -195,7 +196,7 @@ public class TelaCadastroCliente extends javax.swing.JFrame {
             cliente.setNome(jTextFieldNomeC.getText());
             cliente.setTelefone(jTextFieldTelefoneC.getText());
             cliente.setCNPJ(jTextFieldCpfCnpj.getText());
-            quadro.cadastraClienteJuridico(cliente);
+            this.quadro.cadastraClienteJuridico(cliente);
         }
     }//GEN-LAST:event_jButtonCadastraActionPerformed
 

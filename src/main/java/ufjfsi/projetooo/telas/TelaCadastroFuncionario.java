@@ -14,13 +14,14 @@ package ufjfsi.projetooo.telas;
     * João Pedro Sequeto Nascimento – 201776022
  */
 public class TelaCadastroFuncionario extends javax.swing.JFrame {
-    QuadroFuncionario quadrof = new QuadroFuncionario();
+    private QuadroFuncionario quadrof;
 
     /**
      * Creates new form TelaCadastroFuncionário
      */
     public TelaCadastroFuncionario() {
         initComponents();
+        this.quadrof = new QuadroFuncionario();
     }
 
     /**
@@ -210,7 +211,7 @@ public class TelaCadastroFuncionario extends javax.swing.JFrame {
                 admin.setLogin(jTextFieldLoginF.getText());
                 admin.setSenha(jTextFieldSenhaF.getText());
                 admin.setId(jTextFieldIdF.getText());
-                quadrof.cadastraAdmin(admin);
+                this.quadrof.cadastraAdmin(admin);
             }
             
         }
@@ -225,7 +226,7 @@ public class TelaCadastroFuncionario extends javax.swing.JFrame {
                 funcionario.setLogin(jTextFieldLoginF.getText());
                 funcionario.setSenha(jTextFieldSenhaF.getText());
                 funcionario.setId(jTextFieldIdF.getText());
-                quadrof.cadastraFuncionario(funcionario);
+                this.quadrof.cadastraFuncionario(funcionario);
             }
         }
         
