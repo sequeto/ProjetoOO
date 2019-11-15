@@ -16,7 +16,7 @@ import javax.swing.JFrame;
     * João Pedro Sequeto Nascimento – 201776022
  */
 public class TelaCadastroCliente extends javax.swing.JFrame {
-    QuadroFuncionario quadro = new QuadroFuncionario();
+    QuadroClientes quadro = new QuadroClientes();
 
     /**
      * Creates new form TelaCadastroCliente
