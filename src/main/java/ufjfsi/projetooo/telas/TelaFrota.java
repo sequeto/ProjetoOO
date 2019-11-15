@@ -107,7 +107,7 @@ public class TelaFrota extends javax.swing.JFrame {
             jPanelAcoesVeicLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelAcoesVeicLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButtonCadastrarVeic)
+                .addComponent(jButtonCadastrarVeic, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButtonEditVeic)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
