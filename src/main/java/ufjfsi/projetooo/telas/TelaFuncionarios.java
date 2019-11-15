@@ -13,6 +13,7 @@ package ufjfsi.projetooo.telas;
     * Guilherme Soares Frias – 201535042
     * João Pedro Sequeto Nascimento – 201776022
  */
+import javax.swing.JFrame;
 public class TelaFuncionarios extends javax.swing.JFrame {
 
     /**

@@ -5,6 +5,8 @@
  */
 package ufjfsi.projetooo.telas;
 
+import javax.swing.JFrame;
+
 /**
   * Grupo: 
     * Nome - Matrícula:
@@ -149,7 +151,7 @@ public class TelaCadastroCliente extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed

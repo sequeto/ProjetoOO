@@ -5,6 +5,8 @@
  */
 package ufjfsi.projetooo.telas;
 
+import javax.swing.JFrame;
+
 /**
   * Grupo: 
     * Nome - Matrícula:

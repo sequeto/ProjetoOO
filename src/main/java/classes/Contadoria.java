@@ -5,6 +5,9 @@
  */
 package classes;
 
+
+import java.util.*;
+
 /**
  * Grupo: 
     * Nome - Matrícula:
@@ -16,50 +19,39 @@ package classes;
 
 // Classe que controla valores do sistema.
 public class Contadoria {
-    private double valorCaixaInicial;
-    private double valorCaixaFinal;
-    private double lucro;
-    private double prejuizo;
-    
-    public Contadoria(){
-        this.valorCaixaInicial = 0;
-        this.valorCaixaFinal = 0;
-        this.lucro = 0;
-        this.prejuizo = 0;
+    private static ArrayList<Double> credito;
+    private static ArrayList<Double> debito;
+    private static ArrayList<Double> caixa;
+
+    public Contadoria() {
+        credito = new ArrayList<>();
+        debito = new ArrayList<>();
+        caixa = new ArrayList<>();
+        
+        
     }
+    
+    public void movimentoDeCaixa(double valor) {
+        if(valor < 0){
+            debito.add(valor);
+            caixa.add(valor);}
+        else{
+            credito.add(valor);
+            caixa.add(valor);}
+        }    
+    
+    
+    public double gerarRelatorio() {
+        double valor = 0;
+        for (int i = 0; i < caixa.size(); i++) {
+            valor = valor + caixa.get(i);
+            
+        }
+        return valor;
+        
+        
+    }}
+    
 
     // Getters e Setters
-    public double getValorCaixaInicial() {
-        return valorCaixaInicial;
-    }
 
-    public void setValorCaixaInicial(double valorCaixaInicial) {
-        this.valorCaixaInicial = valorCaixaInicial;
-    }
-
-    public double getValorCaixaFinal() {
-        return valorCaixaFinal;
-    }
-
-    public void setValorCaixaFinal(double valorCaixaFinal) {
-        this.valorCaixaFinal = valorCaixaFinal;
-    }
-
-    public double getLucro() {
-        return lucro;
-    }
-    
-    public double getPrejuizo() {
-        return prejuizo;
-    }
-    
-    public void calculaLucro(){
-        if(this.valorCaixaInicial < this.valorCaixaFinal){
-            this.lucro = this.valorCaixaFinal - this.valorCaixaInicial;
-        }
-        
-        else{
-            this.prejuizo = this.valorCaixaFinal - this.valorCaixaInicial;
-        }
-    }
-}
