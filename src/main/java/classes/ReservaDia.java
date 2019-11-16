@@ -14,6 +14,11 @@ package classes;
     * João Pedro Sequeto Nascimento – 201776022
  */
 public class ReservaDia extends Reserva{
+
+    public ReservaDia() {
+    }
+        
+    
     
     public ReservaDia(ClienteFisico cliente, int periodo, Veiculo veiculo, double valor) {
         super(cliente, periodo, veiculo, valor);

@@ -19,6 +19,11 @@ public abstract class Cliente {
     private String nome;
     private String telefone;
     public  static int reservas;
+
+    public Cliente() {
+    }
+    
+    
     
     public Cliente(String nome, String telefone){
         this.nome = nome;

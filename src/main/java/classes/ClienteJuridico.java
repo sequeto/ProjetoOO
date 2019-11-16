@@ -19,6 +19,11 @@ import java.util.*;
 public class ClienteJuridico extends Cliente{
     private String cnpj;
 
+    public ClienteJuridico() {
+    }
+    
+    
+
     public ClienteJuridico(String nome, String telefone, String cnpj) {
         super(nome, telefone);
         this.cnpj = cnpj;

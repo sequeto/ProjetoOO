@@ -5,6 +5,9 @@
  */
 package ufjfsi.projetooo.telas;
 
+import classes.ReservaAno;
+import classes.ReservaDia;
+import classes.ReservaMes;
 /**
  * Grupo: 
     * Nome - Matrícula:

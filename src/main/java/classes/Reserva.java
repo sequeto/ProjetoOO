@@ -19,6 +19,11 @@ public abstract class Reserva {
     private int periodo;
     private Veiculo veiculo;
     private double valor;
+
+    public Reserva() {
+    }
+    
+    
     
     
         public Reserva(ClienteFisico cliente, int periodo, Veiculo veiculo, double valor){

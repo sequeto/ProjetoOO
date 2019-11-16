@@ -19,10 +19,14 @@ public class Veiculo {
     private String placa;
     private String modelo;
     private String cor;
-    private int ano;
+    private String ano;
     private boolean alugado;
 
-    public Veiculo(String placa, String modelo, String cor, int ano, boolean alugado)
+    public Veiculo() {
+    }
+
+    
+    public Veiculo(String placa, String modelo, String cor, String ano, boolean alugado)
     {
         this.placa = placa;
         this.modelo = modelo;
@@ -66,13 +70,12 @@ public class Veiculo {
         this.cor = cor;
     }
 
-    public int getAno() {
+    public String getAno() {
         return ano;
     }
 
-    public void setAno(int ano) {
+    public void setAno(String ano) {
         this.ano = ano;
     }
-    
-    
+
 }

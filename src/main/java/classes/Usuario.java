@@ -22,6 +22,10 @@ public abstract class Usuario {
     private String senha;
     private String tipo;
     private String identificacao;
+
+    public Usuario() {
+    }
+    
     
     public Usuario(String nome, String cpf, String login, String senha, String tipo, String identificacao){
         this.nome = nome;

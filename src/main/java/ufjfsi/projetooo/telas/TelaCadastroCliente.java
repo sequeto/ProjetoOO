@@ -5,6 +5,9 @@
  */
 package ufjfsi.projetooo.telas;
 
+import classes.ClienteFisico;
+import classes.ClienteJuridico;
+import classes.QuadroClientes;
 import javax.swing.JFrame;
 
 /**

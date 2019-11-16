@@ -5,6 +5,9 @@
  */
 package ufjfsi.projetooo.telas;
 
+import classes.Frota;
+import classes.Veiculo;
+
 /**
  * Grupo: 
     * Nome - Matrícula:
@@ -179,7 +182,7 @@ public class TelaCadastroVeiculo extends javax.swing.JFrame {
         veiculo.setModelo(jTextFieldModelo.getText());
         veiculo.setCor(jTextFieldCor.getText());
         veiculo.setAno(jTextFieldAno.getText());
-        this.frota.adicionaVeiculo();
+        this.frota.adicionaVeiculo(veiculo);
     }//GEN-LAST:event_jButtonCadastraVActionPerformed
 
     /**

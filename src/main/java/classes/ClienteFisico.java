@@ -18,6 +18,11 @@ import java.util.*;
 public class ClienteFisico extends Cliente{
      private String cpf;
 
+    public ClienteFisico() {
+    }
+     
+     
+     
     public ClienteFisico(String nome, String telefone, String cpf) {
         super(nome, telefone);
         this.cpf = cpf;

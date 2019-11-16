@@ -5,6 +5,10 @@
  */
 package ufjfsi.projetooo.telas;
 
+import classes.Administrador;
+import classes.Funcionario;
+import classes.QuadroFuncionarios;
+
 /**
  * Grupo: 
     * Nome - Matrícula:
@@ -14,14 +18,14 @@ package ufjfsi.projetooo.telas;
     * João Pedro Sequeto Nascimento – 201776022
  */
 public class TelaCadastroFuncionario extends javax.swing.JFrame {
-    private QuadroFuncionario quadrof;
+    private QuadroFuncionarios quadrof;
 
     /**
      * Creates new form TelaCadastroFuncionário
      */
     public TelaCadastroFuncionario() {
         initComponents();
-        this.quadrof = new QuadroFuncionario();
+        this.quadrof = new QuadroFuncionarios();
     }
 
     /**
@@ -201,7 +205,7 @@ public class TelaCadastroFuncionario extends javax.swing.JFrame {
 
     private void jButtonCadastraFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCadastraFActionPerformed
         // TODO add your handling code here:
-        if (((String)jComboBoxTipoPessoa.getSelectedItem()).equals("Admin"))
+        if (((String)jComboBoxAdmF.getSelectedItem()).equals("Admin"))
         {
             if(jTextFieldSenhaF.getText().equals(jTextFieldConfirmSenha.getText()))
             {
