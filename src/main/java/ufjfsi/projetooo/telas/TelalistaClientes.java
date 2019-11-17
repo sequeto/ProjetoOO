@@ -5,6 +5,8 @@
  */
 package ufjfsi.projetooo.telas;
 
+import static classes.QuadroClientes.clientesFis;
+import javax.swing.DefaultListModel;
 import javax.swing.JFrame;
 
 /**
@@ -20,8 +22,17 @@ public class TelalistaClientes extends javax.swing.JFrame {
     /**
      * Creates new form TelalistaClientes
      */
+    
+    
     public TelalistaClientes() {
         initComponents();
+        DefaultListModel lista= new DefaultListModel();
+        for(int i=0;i<clientesFis.size();i++){
+            lista.addElement(clientesFis.get(i).getNome());
+        
+    }
+        jList2.setModel(lista);
+        
     }
 
     /**
@@ -37,8 +48,9 @@ public class TelalistaClientes extends javax.swing.JFrame {
         jButtonRemocaoCliente = new javax.swing.JButton();
         jButtonEdicaoCliente = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
-        list1 = new java.awt.List();
         label1 = new java.awt.Label();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jList2 = new javax.swing.JList<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -64,8 +76,20 @@ public class TelalistaClientes extends javax.swing.JFrame {
         });
 
         jButton4.setText("Voltar");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         label1.setText("Lista de clientes:");
+
+        jList2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jList2MouseClicked(evt);
+            }
+        });
+        jScrollPane2.setViewportView(jList2);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -76,14 +100,13 @@ public class TelalistaClientes extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(list1, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButtonEdicaoCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jButtonRemocaoCliente, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jButtonCadastroCliente, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 108, Short.MAX_VALUE)))))
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, 108, Short.MAX_VALUE)
+                            .addComponent(jButtonEdicaoCliente, javax.swing.GroupLayout.DEFAULT_SIZE, 108, Short.MAX_VALUE)
+                            .addComponent(jButtonRemocaoCliente, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButtonCadastroCliente, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 108, Short.MAX_VALUE))))
                 .addContainerGap(48, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -99,9 +122,9 @@ public class TelalistaClientes extends javax.swing.JFrame {
                         .addComponent(jButtonRemocaoCliente)
                         .addGap(18, 18, 18)
                         .addComponent(jButtonEdicaoCliente)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(110, 110, 110)
                         .addComponent(jButton4))
-                    .addComponent(list1, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane2))
                 .addContainerGap(38, Short.MAX_VALUE))
         );
 
@@ -112,15 +135,28 @@ public class TelalistaClientes extends javax.swing.JFrame {
         TelaCadastroCliente telaCad = new TelaCadastroCliente();
         telaCad.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         telaCad.setVisible(true);
+        dispose();
     }//GEN-LAST:event_jButtonCadastroClienteActionPerformed
 
     private void jButtonRemocaoClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRemocaoClienteActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_jButtonRemocaoClienteActionPerformed
 
     private void jButtonEdicaoClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEdicaoClienteActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtonEdicaoClienteActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        
+        TelaAdmin t = new TelaAdmin();
+        t.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        t.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jList2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jList2MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jList2MouseClicked
 
     /**
      * @param args the command line arguments
@@ -162,7 +198,8 @@ public class TelalistaClientes extends javax.swing.JFrame {
     private javax.swing.JButton jButtonCadastroCliente;
     private javax.swing.JButton jButtonEdicaoCliente;
     private javax.swing.JButton jButtonRemocaoCliente;
+    private javax.swing.JList<String> jList2;
+    private javax.swing.JScrollPane jScrollPane2;
     private java.awt.Label label1;
-    private java.awt.List list1;
     // End of variables declaration//GEN-END:variables
 }

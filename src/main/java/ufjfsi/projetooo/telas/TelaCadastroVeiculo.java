@@ -6,7 +6,9 @@
 package ufjfsi.projetooo.telas;
 
 import classes.Frota;
+import static classes.Frota.frota;
 import classes.Veiculo;
+import javax.swing.JFrame;
 
 /**
  * Grupo: 
@@ -17,14 +19,14 @@ import classes.Veiculo;
     * João Pedro Sequeto Nascimento – 201776022
  */
 public class TelaCadastroVeiculo extends javax.swing.JFrame {
-    private Frota frota;
+    
 
     /**
      * Creates new form TelaCadastroVeiculo
      */
     public TelaCadastroVeiculo() {
         initComponents();
-        this.frota = new Frota();
+        
     }
 
     /**
@@ -182,7 +184,11 @@ public class TelaCadastroVeiculo extends javax.swing.JFrame {
         veiculo.setModelo(jTextFieldModelo.getText());
         veiculo.setCor(jTextFieldCor.getText());
         veiculo.setAno(jTextFieldAno.getText());
-        this.frota.adicionaVeiculo(veiculo);
+        frota.add(veiculo);
+        TelaFrota telaC = new TelaFrota();
+        telaC.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        telaC.setVisible(true);
+        dispose();
     }//GEN-LAST:event_jButtonCadastraVActionPerformed
 
     /**

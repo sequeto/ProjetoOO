@@ -38,7 +38,7 @@ public class TelaAdmin extends javax.swing.JFrame {
         jButtonClientes = new javax.swing.JButton();
         jButtonVeiculos = new javax.swing.JButton();
         jButtonFinancas = new javax.swing.JButton();
-        jButtonFuncionarios = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -67,10 +67,10 @@ public class TelaAdmin extends javax.swing.JFrame {
             }
         });
 
-        jButtonFuncionarios.setText("Funcionários");
-        jButtonFuncionarios.addActionListener(new java.awt.event.ActionListener() {
+        jButton1.setText("Sair");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonFuncionariosActionPerformed(evt);
+                jButton1ActionPerformed(evt);
             }
         });
 
@@ -81,29 +81,33 @@ public class TelaAdmin extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(34, 34, 34)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 514, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 514, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(34, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jButtonClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButtonVeiculos, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGap(48, 48, 48)
                         .addComponent(jButtonFinancas, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButtonFuncionarios)))
-                .addContainerGap(34, Short.MAX_VALUE))
+                        .addGap(81, 81, 81))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(21, 21, 21))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
+                .addComponent(jButton1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(55, 55, 55)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonClientes)
                     .addComponent(jButtonVeiculos)
-                    .addComponent(jButtonFinancas)
-                    .addComponent(jButtonFuncionarios))
-                .addContainerGap(107, Short.MAX_VALUE))
+                    .addComponent(jButtonFinancas))
+                .addContainerGap(89, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -127,25 +131,26 @@ public class TelaAdmin extends javax.swing.JFrame {
         TelaContadoria telaC = new TelaContadoria();
         telaC.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         telaC.setVisible(true);
+        dispose();
     }//GEN-LAST:event_jButtonFinancasActionPerformed
 
     private void jButtonClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonClientesActionPerformed
         TelalistaClientes telaLC = new TelalistaClientes();
         telaLC.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         telaLC.setVisible(true);
+        dispose();
     }//GEN-LAST:event_jButtonClientesActionPerformed
 
     private void jButtonVeiculosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVeiculosActionPerformed
         TelaFrota telaF = new TelaFrota();
         telaF.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         telaF.setVisible(true);
+        dispose();
     }//GEN-LAST:event_jButtonVeiculosActionPerformed
 
-    private void jButtonFuncionariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonFuncionariosActionPerformed
-        TelaQuadroFuncionarios telaQF = new TelaQuadroFuncionarios();
-        telaQF.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        telaQF.setVisible(true);
-    }//GEN-LAST:event_jButtonFuncionariosActionPerformed
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -184,9 +189,9 @@ public class TelaAdmin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButtonClientes;
     private javax.swing.JButton jButtonFinancas;
-    private javax.swing.JButton jButtonFuncionarios;
     private javax.swing.JButton jButtonVeiculos;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;

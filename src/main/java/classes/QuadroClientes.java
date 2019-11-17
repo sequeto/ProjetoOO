@@ -11,11 +11,15 @@ import java.util.*;
  * @author Sequeto
  */
 public class QuadroClientes {
-    private static List<ClienteFisico> clientesFis;
+
+    /**
+     *
+     */
+    public static List<ClienteFisico>  clientesFis = new ArrayList<>();
     private static List<ClienteJuridico> clientesJur;
     
     public QuadroClientes(){
-        clientesFis = new ArrayList<>();
+        
         clientesJur = new ArrayList<>();
     }
     
@@ -35,6 +39,8 @@ public class QuadroClientes {
     public void editaClienteFisico(){
         
     }
+    
+   
     
     // Funções para cadastro de cliente jurídico
     public void cadastraClienteJuridico(ClienteJuridico clienteJ){

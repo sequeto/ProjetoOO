@@ -5,6 +5,8 @@
  */
 package ufjfsi.projetooo.telas;
 
+import static classes.Frota.frota;
+import javax.swing.DefaultListModel;
 import javax.swing.JFrame;
 
 /**
@@ -22,6 +24,12 @@ public class TelaFrota extends javax.swing.JFrame {
      */
     public TelaFrota() {
         initComponents();
+        DefaultListModel lista= new DefaultListModel();
+        for(int i=0;i<frota.size();i++){
+            lista.addElement(frota.get(i).getModelo());
+        
+    }
+        jListListaVeic.setModel(lista);
     }
 
     /**
@@ -89,7 +97,12 @@ public class TelaFrota extends javax.swing.JFrame {
             }
         });
 
-        jButtonVoltarFrota.setText("         ");
+        jButtonVoltarFrota.setText("Voltar");
+        jButtonVoltarFrota.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonVoltarFrotaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanelAcoesVeicLayout = new javax.swing.GroupLayout(jPanelAcoesVeic);
         jPanelAcoesVeic.setLayout(jPanelAcoesVeicLayout);
@@ -145,6 +158,7 @@ public class TelaFrota extends javax.swing.JFrame {
         TelaCadastroVeiculo telaCadV = new TelaCadastroVeiculo();
         telaCadV.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         telaCadV.setVisible(true);
+        dispose();
     }//GEN-LAST:event_jButtonCadastrarVeicActionPerformed
 
     private void jButtonEditVeicActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEditVeicActionPerformed
@@ -154,6 +168,13 @@ public class TelaFrota extends javax.swing.JFrame {
     private void jButtonExcluirVeicActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonExcluirVeicActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtonExcluirVeicActionPerformed
+
+    private void jButtonVoltarFrotaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVoltarFrotaActionPerformed
+        TelaAdmin t = new TelaAdmin();
+        t.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        t.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jButtonVoltarFrotaActionPerformed
 
     /**
      * @param args the command line arguments

@@ -8,6 +8,7 @@ package ufjfsi.projetooo.telas;
 import classes.ClienteFisico;
 import classes.ClienteJuridico;
 import classes.QuadroClientes;
+import static classes.QuadroClientes.clientesFis;
 import javax.swing.JFrame;
 
 /**
@@ -19,14 +20,15 @@ import javax.swing.JFrame;
     * João Pedro Sequeto Nascimento – 201776022
  */
 public class TelaCadastroCliente extends javax.swing.JFrame {
-    private QuadroClientes quadro;
+    
 
     /**
      * Creates new form TelaCadastroCliente
      */
     public TelaCadastroCliente() {
         initComponents();
-        this.quadro = new QuadroClientes();
+        
+        
     }
 
     /**
@@ -171,7 +173,7 @@ public class TelaCadastroCliente extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        
+        dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jTextFieldNomeCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldNomeCActionPerformed
@@ -190,17 +192,25 @@ public class TelaCadastroCliente extends javax.swing.JFrame {
             cliente.setNome(jTextFieldNomeC.getText());
             cliente.setTelefone(jTextFieldTelefoneC.getText());
             cliente.setCPF(jTextFieldCpfCnpj.getText());
-            this.quadro.cadastraClienteFisico(cliente);
+            clientesFis.add(cliente);
+            TelalistaClientes telaC = new TelalistaClientes();
+            telaC.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+            telaC.setVisible(true);
+            dispose();
         }
         
         else
         {
             ClienteJuridico cliente = new ClienteJuridico();
+            
             cliente.setNome(jTextFieldNomeC.getText());
             cliente.setTelefone(jTextFieldTelefoneC.getText());
             cliente.setCNPJ(jTextFieldCpfCnpj.getText());
-            this.quadro.cadastraClienteJuridico(cliente);
+           
+            dispose();
         }
+        
+        
     }//GEN-LAST:event_jButtonCadastraActionPerformed
 
     private void jTextFieldTelefoneCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldTelefoneCActionPerformed

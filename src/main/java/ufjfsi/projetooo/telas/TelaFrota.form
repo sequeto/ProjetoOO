@@ -155,8 +155,11 @@
         </Component>
         <Component class="javax.swing.JButton" name="jButtonVoltarFrota">
           <Properties>
-            <Property name="text" type="java.lang.String" value="         "/>
+            <Property name="text" type="java.lang.String" value="Voltar"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonVoltarFrotaActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

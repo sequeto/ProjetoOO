@@ -19,19 +19,17 @@ import java.util.*;
 
 // Classe que controla valores do sistema.
 public class Contadoria {
-    private static ArrayList<Double> credito;
-    private static ArrayList<Double> debito;
-    private static ArrayList<Double> caixa;
+    public static ArrayList<Double> credito  = new ArrayList<>();;
+    public static ArrayList<Double> debito  = new ArrayList<>();;
+    public static ArrayList<Double> caixa  = new ArrayList<>();;
 
     public Contadoria() {
-        credito = new ArrayList<>();
-        debito = new ArrayList<>();
-        caixa = new ArrayList<>();
+
         
         
     }
     
-    public void movimentoDeCaixa(double valor) {
+    public static void movimentoDeCaixa(double valor) {
         if(valor < 0){
             debito.add(valor);
             caixa.add(valor);}
@@ -41,7 +39,7 @@ public class Contadoria {
         }    
     
     
-    public double gerarRelatorio() {
+    public static double gerarRelatorio() {
         double valor = 0;
         for (int i = 0; i < caixa.size(); i++) {
             valor = valor + caixa.get(i);

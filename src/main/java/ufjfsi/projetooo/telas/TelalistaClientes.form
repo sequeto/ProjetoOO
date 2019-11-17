@@ -28,15 +28,13 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="label1" min="-2" max="-2" attributes="0"/>
                   <Group type="102" attributes="0">
-                      <Component id="list1" min="-2" pref="268" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jButton4" min="-2" pref="108" max="-2" attributes="0"/>
-                          <Component id="jButtonEdicaoCliente" alignment="0" min="-2" pref="108" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="jButtonRemocaoCliente" alignment="1" max="32767" attributes="0"/>
-                              <Component id="jButtonCadastroCliente" alignment="1" pref="108" max="32767" attributes="0"/>
-                          </Group>
+                      <Component id="jScrollPane2" min="-2" pref="268" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="jButton4" pref="108" max="32767" attributes="0"/>
+                          <Component id="jButtonEdicaoCliente" alignment="0" pref="108" max="32767" attributes="0"/>
+                          <Component id="jButtonRemocaoCliente" alignment="1" max="32767" attributes="0"/>
+                          <Component id="jButtonCadastroCliente" alignment="1" pref="108" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -57,10 +55,10 @@
                       <Component id="jButtonRemocaoCliente" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jButtonEdicaoCliente" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="110" max="-2" attributes="0"/>
                       <Component id="jButton4" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <Component id="list1" min="-2" pref="238" max="-2" attributes="0"/>
+                  <Component id="jScrollPane2" max="32767" attributes="0"/>
               </Group>
               <EmptySpace pref="38" max="32767" attributes="0"/>
           </Group>
@@ -96,13 +94,33 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Voltar"/>
       </Properties>
-    </Component>
-    <Component class="java.awt.List" name="list1">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton4ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="java.awt.Label" name="label1">
       <Properties>
         <Property name="text" type="java.lang.String" value="Lista de clientes:"/>
       </Properties>
     </Component>
+    <Container class="javax.swing.JScrollPane" name="jScrollPane2">
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JList" name="jList2">
+          <Properties>
+            <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
+              <StringArray count="0"/>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jList2MouseClicked"/>
+          </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+          </AuxValues>
+        </Component>
+      </SubComponents>
+    </Container>
   </SubComponents>
 </Form>

@@ -16,10 +16,10 @@ import java.util.*;
     * João Pedro Sequeto Nascimento – 201776022
  */
 public class Frota {
-    private List<Veiculo> frota;
+    public static List<Veiculo>  frota = new ArrayList<>();
     
     public Frota(){
-        this.frota = new ArrayList();
+     
     }
 
     public List<Veiculo> getFrota() {
