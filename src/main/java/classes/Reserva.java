@@ -6,82 +6,65 @@
 package classes;
 
 /**
- * Grupo: 
-    * Nome - Matrícula:
-    * Milles Joseph Magalhães - 20177626
-    * Joan Gustavo Melo Fortes – 201435005
-    * Guilherme Soares Frias – 201535042
-    * João Pedro Sequeto Nascimento – 201776022
+ * Grupo: Nome - Matrícula: 
+ * Milles Joseph Magalhães - 20177626 
+ * Joan Gustavo Melo Fortes – 201435005 
+ * Guilherme Soares Frias – 201535042 
+ * João Pedro Sequeto Nascimento – 201776022
  */
-public abstract class Reserva {
+public class Reserva {
+
     private ClienteFisico clienteFis;
     private ClienteJuridico clienteJur;
     private int periodo;
     private Veiculo veiculo;
-    private double valor;
 
     public Reserva() {
     }
-    
-    
-    
-    
-        public Reserva(ClienteFisico cliente, int periodo, Veiculo veiculo, double valor){
-            this.clienteFis = cliente;
-            this.periodo = periodo;
-            this.veiculo = veiculo;
-            this.valor = valor;
-        }
-        
-        public Reserva(ClienteJuridico cliente, int periodo, Veiculo veiculo, double valor){
-            this.clienteJur = cliente;
-            this.periodo = periodo;
-            this.veiculo = veiculo;
-            this.valor = valor;
-        }
-        
-        public abstract double calculaValor();
 
-        // Getters e Setters
-        public ClienteFisico getClienteFis() {
-            return clienteFis;
-        }
+    public Reserva(ClienteFisico cliente, int periodo, Veiculo veiculo) {
+        this.clienteFis = cliente;
+        this.periodo = periodo;
+        this.veiculo = veiculo;
+    }
 
-        public void setClienteFis(ClienteFisico clienteFis) {
-            this.clienteFis = clienteFis;
-        }
+    public Reserva(ClienteJuridico cliente, int periodo, Veiculo veiculo) {
+        this.clienteJur = cliente;
+        this.periodo = periodo;
+        this.veiculo = veiculo;
+    }
 
-        public ClienteJuridico getClienteJur() {
-            return clienteJur;
-        }
+    // Getters e Setters
+    public ClienteFisico getClienteFis() {
+        return clienteFis;
+    }
 
-        public void setClienteJur(ClienteJuridico clienteJur) {
-            this.clienteJur = clienteJur;
-        }
+    public void setClienteFis(ClienteFisico clienteFis) {
+        this.clienteFis = clienteFis;
+    }
 
-        public int getPeriodo() {
-            return periodo;
-        }
+    public ClienteJuridico getClienteJur() {
+        return clienteJur;
+    }
 
-        public void setPeriodo(int periodo) {
-            this.periodo = periodo;
-        }
+    public void setClienteJur(ClienteJuridico clienteJur) {
+        this.clienteJur = clienteJur;
+    }
 
-        public Veiculo getVeiculo() {
-            return veiculo;
-        }
+    public int getPeriodo() {
+        return periodo;
+    }
 
-        public void setVeiculo(Veiculo veiculo) {
-            this.veiculo = veiculo;
-        }
+    public void setPeriodo(int periodo) {
+        this.periodo = periodo;
+    }
 
-        public double getValor() {
-            return valor;
-        }
+    public Veiculo getVeiculo() {
+        return veiculo;
+    }
 
-        public void setValor(double valor) {
-            this.valor = valor;
-        }
-        
-       
+    public void setVeiculo(Veiculo veiculo) {
+        this.veiculo = veiculo;
+    }
+
 }

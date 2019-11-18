@@ -5,16 +5,21 @@
  */
 package ufjfsi.projetooo.telas;
 
-import classes.ReservaAno;
-import classes.ReservaDia;
-import classes.ReservaMes;
+import static classes.Contadoria.caixa;
+import static classes.Contadoria.credito;
+import classes.Reserva;
+import static classes.utils.clientesFis;
+import static classes.utils.frota;
+import static classes.utils.reserva;
+import javax.swing.DefaultListModel;
+import javax.swing.JFrame;
+
 /**
- * Grupo: 
-    * Nome - Matrícula:
-    * Milles Joseph Magalhães - 20177626
-    * Joan Gustavo Melo Fortes – 201435005
-    * Guilherme Soares Frias – 201535042
-    * João Pedro Sequeto Nascimento – 201776022
+ * Grupo: Nome - Matrícula: 
+ * Milles Joseph Magalhães - 20177626 
+ * Joan Gustavo Melo Fortes – 201435005 
+ * Guilherme Soares Frias – 201535042 
+ * João Pedro Sequeto Nascimento – 201776022
  */
 public class TelaReserva extends javax.swing.JFrame {
 
@@ -23,6 +28,17 @@ public class TelaReserva extends javax.swing.JFrame {
      */
     public TelaReserva() {
         initComponents();
+        DefaultListModel lista = new DefaultListModel();
+        DefaultListModel lista2 = new DefaultListModel();
+        for (int i = 0; i < frota.size(); i++) {
+            if (frota.get(i).getAlugado() == false) {
+                lista.addElement(frota.get(i).getModelo());
+                lista2.addElement(i);
+            }
+        }
+        jList1.setModel(lista2);
+        jList2.setModel(lista);
+
     }
 
     /**
@@ -41,19 +57,24 @@ public class TelaReserva extends javax.swing.JFrame {
         jTextFieldCliente1 = new javax.swing.JTextField();
         jLabelVeículo1 = new javax.swing.JLabel();
         jTextFieldVeiculo1 = new javax.swing.JTextField();
-        jComboBoxPeriodo = new javax.swing.JComboBox<>();
-        jLabelTipoPeriodo = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jTextFieldPeriodo = new javax.swing.JTextField();
         jButtonReservar = new javax.swing.JButton();
         jLabelTipoCliente = new javax.swing.JLabel();
         jComboBoxTipoCliente = new javax.swing.JComboBox<>();
+        jButton1 = new javax.swing.JButton();
+        label1 = new java.awt.Label();
+        label2 = new java.awt.Label();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jList1 = new javax.swing.JList<>();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jList2 = new javax.swing.JList<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabelCliente1.setText("Cliente");
 
-        jTextFieldCliente1.setText("Id do cliente");
+        jTextFieldCliente1.setText("Digite o ID do cliente a reservar");
         jTextFieldCliente1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldCliente1ActionPerformed(evt);
@@ -62,21 +83,12 @@ public class TelaReserva extends javax.swing.JFrame {
 
         jLabelVeículo1.setText("Veículo");
 
-        jTextFieldVeiculo1.setText("Id do veículo");
+        jTextFieldVeiculo1.setText("Digite o ID do veiculo a ser reservado");
         jTextFieldVeiculo1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldVeiculo1ActionPerformed(evt);
             }
         });
-
-        jComboBoxPeriodo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Diária", "Mensal", "Anual" }));
-        jComboBoxPeriodo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBoxPeriodoActionPerformed(evt);
-            }
-        });
-
-        jLabelTipoPeriodo.setText("Tipo De Reserva");
 
         jLabel1.setText("Período");
 
@@ -103,142 +115,170 @@ public class TelaReserva extends javax.swing.JFrame {
             }
         });
 
+        jButton1.setText("Voltar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        label1.setText("ID");
+
+        label2.setText("Veiculos Disponiveis");
+
+        jList1.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane1.setViewportView(jList1);
+
+        jList2.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane2.setViewportView(jList2);
+
         javax.swing.GroupLayout jPanelReservaLayout = new javax.swing.GroupLayout(jPanelReserva);
         jPanelReserva.setLayout(jPanelReservaLayout);
         jPanelReservaLayout.setHorizontalGroup(
             jPanelReservaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelReservaLayout.createSequentialGroup()
-                .addGap(132, 132, 132)
-                .addComponent(jButtonReservar)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelReservaLayout.createSequentialGroup()
-                .addGap(0, 35, Short.MAX_VALUE)
-                .addGroup(jPanelReservaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGap(18, 18, 18)
+                .addGroup(jPanelReservaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanelReservaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanelReservaLayout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextFieldPeriodo, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(19, 19, 19)
+                        .addComponent(label2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanelReservaLayout.createSequentialGroup()
-                        .addComponent(jLabelTipoPeriodo)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jComboBoxPeriodo, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane2)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
+                .addGroup(jPanelReservaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanelReservaLayout.createSequentialGroup()
                         .addGroup(jPanelReservaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabelTipoCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabelCliente1)
-                            .addComponent(jLabelVeículo1))
+                            .addComponent(jLabelVeículo1)
+                            .addComponent(jLabel1))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanelReservaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTextFieldVeiculo1)
+                            .addComponent(jTextFieldVeiculo1, javax.swing.GroupLayout.DEFAULT_SIZE, 239, Short.MAX_VALUE)
                             .addComponent(jTextFieldCliente1)
-                            .addComponent(jComboBoxTipoCliente, 0, 239, Short.MAX_VALUE))))
+                            .addComponent(jComboBoxTipoCliente, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(jPanelReservaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jButtonReservar)
+                                .addComponent(jTextFieldPeriodo, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addComponent(jButton1))
                 .addGap(61, 61, 61))
         );
         jPanelReservaLayout.setVerticalGroup(
             jPanelReservaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelReservaLayout.createSequentialGroup()
                 .addGap(49, 49, 49)
-                .addGroup(jPanelReservaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextFieldCliente1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabelCliente1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanelReservaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextFieldVeiculo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabelVeículo1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanelReservaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabelTipoCliente)
-                    .addComponent(jComboBoxTipoCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanelReservaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jComboBoxPeriodo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabelTipoPeriodo))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanelReservaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextFieldPeriodo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButtonReservar)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanelReservaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelReservaLayout.createSequentialGroup()
+                        .addGroup(jPanelReservaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(label2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanelReservaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanelReservaLayout.createSequentialGroup()
+                        .addGroup(jPanelReservaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jTextFieldCliente1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelCliente1))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanelReservaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jTextFieldVeiculo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelVeículo1))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanelReservaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabelTipoCliente)
+                            .addComponent(jComboBoxTipoCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanelReservaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1)
+                            .addComponent(jTextFieldPeriodo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanelReservaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton1)
+                            .addComponent(jButtonReservar))))
+                .addContainerGap(111, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jPanelReserva, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+            .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanelReserva, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(jPanelReserva, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jComboBoxPeriodoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxPeriodoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBoxPeriodoActionPerformed
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        TelaListaReservas telaR = new TelaListaReservas();
+        telaR.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        telaR.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jTextFieldCliente1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldCliente1ActionPerformed
+    private void jComboBoxTipoClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxTipoClienteActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldCliente1ActionPerformed
+    }//GEN-LAST:event_jComboBoxTipoClienteActionPerformed
 
-    private void jTextFieldVeiculo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldVeiculo1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldVeiculo1ActionPerformed
+    private void jButtonReservarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonReservarActionPerformed
+
+        Reserva r = new Reserva();
+        r.setClienteFis(clientesFis.get(Integer.parseInt(jTextFieldCliente1.getText())));
+        r.setVeiculo(frota.get(Integer.parseInt(jTextFieldVeiculo1.getText())));
+        r.getVeiculo().setAlugado(true);
+        r.setPeriodo(Integer.parseInt(jTextFieldPeriodo.getText()));
+        reserva.add(r);
+
+        if (r.getPeriodo() > 365) {
+            caixa.add(r.getPeriodo() * 0.7 * r.getVeiculo().getValor());
+            credito.add(r.getPeriodo() * 0.7 * r.getVeiculo().getValor());
+        } else if (r.getPeriodo() > 30) {
+            caixa.add(r.getPeriodo() * 0.9 * r.getVeiculo().getValor());
+            credito.add(r.getPeriodo() * 0.9 * r.getVeiculo().getValor());
+
+        } else {
+            caixa.add(r.getPeriodo() * r.getVeiculo().getValor());
+            credito.add(r.getPeriodo() * r.getVeiculo().getValor());
+        }
+
+        TelaListaReservas telaR = new TelaListaReservas();
+        telaR.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        telaR.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jButtonReservarActionPerformed
 
     private void jTextFieldPeriodoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldPeriodoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldPeriodoActionPerformed
 
-    private void jButtonReservarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonReservarActionPerformed
+    private void jTextFieldVeiculo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldVeiculo1ActionPerformed
         // TODO add your handling code here:
-        if(((String)jComboBoxTipoCliente.getSelectedItem()).equals("Pessoa Física"))
-        {
-            if(((String)jComboBoxPeriodo.getSelectedItem()).equals("Diária"))
-            {
-                ReservaDia reservaDiaria = new ReservaDia();
-            }
-            
-            if(((String)jComboBoxPeriodo.getSelectedItem()).equals("Mensal"))
-            {
-                ReservaMes reservaMensal = new ReservaMes();
-            }
-            
-            if(((String)jComboBoxPeriodo.getSelectedItem()).equals("Anual"))
-            {
-                ReservaAno reservaAnual = new ReservaAno();
-            }
-        }
-        
-        if(((String)jComboBoxTipoCliente.getSelectedItem()).equals("Pessoa Jurídica"))
-        {
-            if(((String)jComboBoxPeriodo.getSelectedItem()).equals("Diária"))
-            {
-                ReservaDia reservaDiaria = new ReservaDia();
-            }
-            
-            if(((String)jComboBoxPeriodo.getSelectedItem()).equals("Mensal"))
-            {
-                ReservaMes reservaMensal = new ReservaMes();
-            }
-            
-            if(((String)jComboBoxPeriodo.getSelectedItem()).equals("Anual"))
-            {
-                ReservaAno reservaAnual = new ReservaAno();
-            }
-        }
-    }//GEN-LAST:event_jButtonReservarActionPerformed
+    }//GEN-LAST:event_jTextFieldVeiculo1ActionPerformed
 
-    private void jComboBoxTipoClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxTipoClienteActionPerformed
+    private void jTextFieldCliente1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldCliente1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBoxTipoClienteActionPerformed
+    }//GEN-LAST:event_jTextFieldCliente1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -274,22 +314,26 @@ public class TelaReserva extends javax.swing.JFrame {
             }
         });
     }
-    
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButtonReservar;
-    private javax.swing.JComboBox<String> jComboBoxPeriodo;
-    public javax.swing.JComboBox<String> jComboBoxTipoCliente;
+    private javax.swing.JComboBox<String> jComboBoxTipoCliente;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabelCliente1;
     private javax.swing.JLabel jLabelTipoCliente;
-    private javax.swing.JLabel jLabelTipoPeriodo;
     private javax.swing.JLabel jLabelVeículo1;
+    private javax.swing.JList<String> jList1;
+    private javax.swing.JList<String> jList2;
     private javax.swing.JPanel jPanelReserva;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextField jTextFieldCliente1;
     private javax.swing.JTextField jTextFieldPeriodo;
     private javax.swing.JTextField jTextFieldVeiculo1;
+    private java.awt.Label label1;
+    private java.awt.Label label2;
     // End of variables declaration//GEN-END:variables
 }
-

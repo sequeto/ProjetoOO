@@ -13,33 +13,30 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 /**
- * Grupo: 
-    * Nome - Matrícula:
-    * Milles Joseph Magalhães - 20177626
-    * Joan Gustavo Melo Fortes – 201435005
-    * Guilherme Soares Frias – 201535042
-    * João Pedro Sequeto Nascimento – 201776022
+ * Grupo: Nome - Matrícula: 
+ * Milles Joseph Magalhães - 20177626 
+ * Joan Gustavo Melo Fortes – 201435005 
+ * Guilherme Soares Frias – 201535042 
+ * João Pedro Sequeto Nascimento – 201776022
  */
 public class TelaContadoria extends javax.swing.JFrame {
 
     /**
      * Creates new form TelaContadoria
      */
-   
     public TelaContadoria() {
         initComponents();
-        DefaultListModel listad= new DefaultListModel();
-        DefaultListModel listac= new DefaultListModel();
-        for(int i=0;i<debito.size();i++){
+        DefaultListModel listad = new DefaultListModel();
+        DefaultListModel listac = new DefaultListModel();
+        for (int i = 0; i < debito.size(); i++) {
             listad.addElement(debito.get(i));
         }
-        for(int i=0;i<credito.size();i++){
+        for (int i = 0; i < credito.size(); i++) {
             listac.addElement(credito.get(i));
         }
         jList1.setModel(listac);
         jList2.setModel(listad);
-        
-        
+
     }
 
     /**
@@ -66,20 +63,10 @@ public class TelaContadoria extends javax.swing.JFrame {
 
         jLabel1.setText("Creditos:");
 
-        jList1.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "milix +1" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
         jScrollPane1.setViewportView(jList1);
 
         jLabel2.setText("Debitos:");
 
-        jList2.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "milix-1" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
         jScrollPane2.setViewportView(jList2);
 
         jButton1.setText("Gerar Relatório");
@@ -103,7 +90,12 @@ public class TelaContadoria extends javax.swing.JFrame {
             }
         });
 
-        jTextField1.setText("jTextField1");
+        jTextField1.setToolTipText("");
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -167,7 +159,7 @@ public class TelaContadoria extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        
+
         JOptionPane.showMessageDialog(null, "Relatorio de Finanças: " + Contadoria.gerarRelatorio());
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -180,12 +172,16 @@ public class TelaContadoria extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
 
-      Contadoria.movimentoDeCaixa(Double.parseDouble(jTextField1.getText()));
-      TelaContadoria telaC = new TelaContadoria();
-      telaC.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-      telaC.setVisible(true);
-      dispose();  
+        Contadoria.movimentoDeCaixa(Double.parseDouble(jTextField1.getText()));
+        TelaContadoria telaC = new TelaContadoria();
+        telaC.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        telaC.setVisible(true);
+        dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
 
     /**
      * @param args the command line arguments

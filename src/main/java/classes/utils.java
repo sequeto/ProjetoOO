@@ -5,6 +5,9 @@
  */
 package classes;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Grupo: Nome - Matrícula: 
  * Milles Joseph Magalhães - 20177626 
@@ -12,23 +15,12 @@ package classes;
  * Guilherme Soares Frias – 201535042 
  * João Pedro Sequeto Nascimento – 201776022
  */
-public class ClienteFisico extends Cliente {
+public class utils {
 
-    private String cpf;
+    public static List<ClienteFisico> clientesFis = new ArrayList<>();
+    public static List<Veiculo> frota = new ArrayList<>();
+    public static List<Reserva> reserva = new ArrayList<>();
 
-    public ClienteFisico() {
-    }
-
-    public ClienteFisico(String nome, String telefone, String cpf) {
-        super(nome, telefone);
-        this.cpf = cpf;
-    }
-
-    public String getCPF() {
-        return this.cpf;
-    }
-
-    public void setCPF(String cpf) {
-        this.cpf = cpf;
-    }
 }
+
+

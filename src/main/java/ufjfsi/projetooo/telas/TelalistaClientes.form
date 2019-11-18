@@ -37,7 +37,6 @@
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="jButton4" pref="108" max="32767" attributes="0"/>
-                          <Component id="jButtonEdicaoCliente" alignment="0" pref="108" max="32767" attributes="0"/>
                           <Component id="jButtonRemocaoCliente" alignment="1" max="32767" attributes="0"/>
                           <Component id="jButtonCadastroCliente" alignment="1" pref="108" max="32767" attributes="0"/>
                       </Group>
@@ -61,9 +60,7 @@
                       <Component id="jButtonCadastroCliente" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jButtonRemocaoCliente" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jButtonEdicaoCliente" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="110" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="151" max="-2" attributes="0"/>
                       <Component id="jButton4" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Component id="jScrollPane2" max="32767" attributes="0"/>
@@ -89,14 +86,6 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonRemocaoClienteActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="jButtonEdicaoCliente">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Editar"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonEdicaoClienteActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jButton4">

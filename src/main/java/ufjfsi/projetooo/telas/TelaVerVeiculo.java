@@ -5,9 +5,9 @@
  */
 package ufjfsi.projetooo.telas;
 
-import classes.Veiculo;
 import static classes.utils.frota;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
 /**
  * Grupo: Nome - Matrícula: 
@@ -16,13 +16,24 @@ import javax.swing.JFrame;
  * Guilherme Soares Frias – 201535042 
  * João Pedro Sequeto Nascimento – 201776022
  */
-public class TelaCadastroVeiculo extends javax.swing.JFrame {
+public class TelaVerVeiculo extends javax.swing.JFrame {
 
     /**
      * Creates new form TelaCadastroVeiculo
      */
-    public TelaCadastroVeiculo() {
+    public TelaVerVeiculo() {
         initComponents();
+        int resposta = Integer.parseInt(JOptionPane.showInputDialog(null, "digite o id do carro: "));
+        jTextFieldPlaca.setText(frota.get(resposta).getPlaca());
+        jTextFieldPlaca.setEnabled(false);
+        jTextFieldAno.setText(frota.get(resposta).getAno());
+        jTextFieldAno.setEnabled(false);
+        jTextFieldCor.setText(frota.get(resposta).getCor());
+        jTextFieldCor.setEnabled(false);
+        jTextFieldModelo.setText(frota.get(resposta).getModelo());
+        jTextFieldModelo.setEnabled(false);
+        jTextField1.setText(String.valueOf(frota.get(resposta).getValor()));
+        jTextField1.setEnabled(false);
 
     }
 
@@ -48,8 +59,8 @@ public class TelaCadastroVeiculo extends javax.swing.JFrame {
         jTextFieldAno = new javax.swing.JTextField();
         jButtonCadastraV = new javax.swing.JButton();
         label1 = new java.awt.Label();
-        textField1 = new java.awt.TextField();
         jButton1 = new javax.swing.JButton();
+        jTextField1 = new javax.swing.JTextField();
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
@@ -98,12 +109,6 @@ public class TelaCadastroVeiculo extends javax.swing.JFrame {
 
         label1.setText("Valor");
 
-        textField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textField1ActionPerformed(evt);
-            }
-        });
-
         jButton1.setText("Voltar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -120,51 +125,47 @@ public class TelaCadastroVeiculo extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabelAno, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabelCor, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabelModelo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE)
+                    .addComponent(jLabelModelo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 49, Short.MAX_VALUE)
                     .addComponent(jLabelPlaca, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jButton1)
                         .addGap(111, 111, 111)
                         .addComponent(jButtonCadastraV))
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jTextFieldPlaca)
-                        .addComponent(jTextFieldModelo)
-                        .addComponent(jTextFieldCor)
-                        .addComponent(jTextFieldAno, javax.swing.GroupLayout.DEFAULT_SIZE, 307, Short.MAX_VALUE)
-                        .addComponent(textField1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(jTextFieldPlaca)
+                    .addComponent(jTextFieldModelo)
+                    .addComponent(jTextFieldCor)
+                    .addComponent(jTextFieldAno, javax.swing.GroupLayout.DEFAULT_SIZE, 307, Short.MAX_VALUE)
+                    .addComponent(jTextField1))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelPlaca)
+                    .addComponent(jTextFieldPlaca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(20, 20, 20)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabelModelo)
+                    .addComponent(jTextFieldModelo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelCor)
+                    .addComponent(jTextFieldCor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(25, 25, 25)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelAno)
+                    .addComponent(jTextFieldAno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabelPlaca)
-                            .addComponent(jTextFieldPlaca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(20, 20, 20)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabelModelo)
-                            .addComponent(jTextFieldModelo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabelCor)
-                            .addComponent(jTextFieldCor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(25, 25, 25)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabelAno)
-                            .addComponent(jTextFieldAno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
-                        .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(textField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonCadastraV)
@@ -209,23 +210,8 @@ public class TelaCadastroVeiculo extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextFieldAnoActionPerformed
 
     private void jButtonCadastraVActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCadastraVActionPerformed
-        // TODO add your handling code here:
-        Veiculo veiculo = new Veiculo();
-        veiculo.setPlaca(jTextFieldPlaca.getText());
-        veiculo.setModelo(jTextFieldModelo.getText());
-        veiculo.setCor(jTextFieldCor.getText());
-        veiculo.setAno(jTextFieldAno.getText());
-        veiculo.setValor(Double.parseDouble(textField1.getText()));
-        frota.add(veiculo);
-        TelaFrota telaC = new TelaFrota();
-        telaC.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        telaC.setVisible(true);
-        dispose();
-    }//GEN-LAST:event_jButtonCadastraVActionPerformed
 
-    private void textField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textField1ActionPerformed
+    }//GEN-LAST:event_jButtonCadastraVActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         TelaFrota telaC = new TelaFrota();
@@ -251,20 +237,21 @@ public class TelaCadastroVeiculo extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TelaCadastroVeiculo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaVerVeiculo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TelaCadastroVeiculo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaVerVeiculo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TelaCadastroVeiculo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaVerVeiculo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TelaCadastroVeiculo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaVerVeiculo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TelaCadastroVeiculo().setVisible(true);
+                new TelaVerVeiculo().setVisible(true);
             }
         });
     }
@@ -279,11 +266,11 @@ public class TelaCadastroVeiculo extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextFieldAno;
     private javax.swing.JTextField jTextFieldCor;
     private javax.swing.JTextField jTextFieldModelo;
     private javax.swing.JTextField jTextFieldPlaca;
     private java.awt.Label label1;
-    private java.awt.TextField textField1;
     // End of variables declaration//GEN-END:variables
 }

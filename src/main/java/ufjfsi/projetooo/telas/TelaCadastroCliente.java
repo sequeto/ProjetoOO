@@ -7,27 +7,24 @@ package ufjfsi.projetooo.telas;
 
 import classes.ClienteFisico;
 import classes.ClienteJuridico;
-import static classes.QuadroClientes.clientesFis;
+import static classes.utils.clientesFis;
 import javax.swing.JFrame;
 
 /**
-  * Grupo: 
-    * Nome - Matrícula:
-    * Milles Joseph Magalhães - 20177626
-    * Joan Gustavo Melo Fortes – 201435005
-    * Guilherme Soares Frias – 201535042
-    * João Pedro Sequeto Nascimento – 201776022
+ * Grupo: Nome - Matrícula: 
+ * Milles Joseph Magalhães - 20177626 
+ * Joan Gustavo Melo Fortes – 201435005 
+ * Guilherme Soares Frias – 201535042 
+ * João Pedro Sequeto Nascimento – 201776022
  */
 public class TelaCadastroCliente extends javax.swing.JFrame {
-    
 
     /**
      * Creates new form TelaCadastroCliente
      */
     public TelaCadastroCliente() {
         initComponents();
-        
-        
+
     }
 
     /**
@@ -185,8 +182,7 @@ public class TelaCadastroCliente extends javax.swing.JFrame {
 
     private void jButtonCadastraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCadastraActionPerformed
         // TODO add your handling code here:
-        if (((String)jComboBoxTipoPessoa.getSelectedItem()).equals("Pessoa Física"))
-        {
+        if (((String) jComboBoxTipoPessoa.getSelectedItem()).equals("Pessoa Física")) {
             ClienteFisico cliente = new ClienteFisico();
             cliente.setNome(jTextFieldNomeC.getText());
             cliente.setTelefone(jTextFieldTelefoneC.getText());
@@ -196,20 +192,17 @@ public class TelaCadastroCliente extends javax.swing.JFrame {
             telaC.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
             telaC.setVisible(true);
             dispose();
-        }
-        
-        else
-        {
+        } else {
             ClienteJuridico cliente = new ClienteJuridico();
-            
+
             cliente.setNome(jTextFieldNomeC.getText());
             cliente.setTelefone(jTextFieldTelefoneC.getText());
             cliente.setCNPJ(jTextFieldCpfCnpj.getText());
-           
+
             dispose();
         }
-        
-        
+
+
     }//GEN-LAST:event_jButtonCadastraActionPerformed
 
     private void jTextFieldTelefoneCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldTelefoneCActionPerformed

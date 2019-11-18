@@ -4,38 +4,43 @@
  * and open the template in the editor.
  */
 package classes;
-import java.lang.*;
-import java.util.*;
 
 /**
- * Grupo: 
-    * Nome - Matrícula:
-    * Milles Joseph Magalhães - 20177626
-    * Joan Gustavo Melo Fortes – 201435005
-    * Guilherme Soares Frias – 201535042
-    * João Pedro Sequeto Nascimento – 201776022
+ * Grupo: Nome - Matrícula: 
+ * Milles Joseph Magalhães - 20177626 
+ * Joan Gustavo Melo Fortes – 201435005 
+ * Guilherme Soares Frias – 201535042 
+ * João Pedro Sequeto Nascimento – 201776022
  */
 public class Veiculo {
+
     private String placa;
     private String modelo;
     private String cor;
     private String ano;
     private boolean alugado;
+    private double valor;
+
+    public void setValor(double valor) {
+        this.valor = valor;
+    }
+
+    public double getValor() {
+        return valor;
+    }
 
     public Veiculo() {
     }
 
-    
-    public Veiculo(String placa, String modelo, String cor, String ano, boolean alugado)
-    {
+    public Veiculo(String placa, String modelo, String cor, String ano, double valor) {
         this.placa = placa;
         this.modelo = modelo;
         this.cor = cor;
         this.ano = ano;
-        this.alugado = alugado;
+        this.alugado = false;
+        this.valor = valor;
     }
 
-    
     // Getters e Setters
     public boolean getAlugado() {
         return alugado;
@@ -44,7 +49,7 @@ public class Veiculo {
     public void setAlugado(boolean alugado) {
         this.alugado = alugado;
     }
-    
+
     // Getters e Setters
     public String getPlaca() {
         return placa;
