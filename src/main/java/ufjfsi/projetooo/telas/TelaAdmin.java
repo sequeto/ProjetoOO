@@ -37,8 +37,8 @@ public class TelaAdmin extends javax.swing.JFrame {
         jButtonClientes = new javax.swing.JButton();
         jButtonVeiculos = new javax.swing.JButton();
         jButtonFinancas = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        jButtonSair = new javax.swing.JButton();
+        jButtonReservas = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -67,17 +67,17 @@ public class TelaAdmin extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setText("Sair");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jButtonSair.setText("Sair");
+        jButtonSair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jButtonSairActionPerformed(evt);
             }
         });
 
-        jButton2.setText("Reservas");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        jButtonReservas.setText("Reservas");
+        jButtonReservas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                jButtonReservasActionPerformed(evt);
             }
         });
 
@@ -96,17 +96,17 @@ public class TelaAdmin extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jButtonFinancas, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jButtonReservas, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(34, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1)
+                .addComponent(jButtonSair)
                 .addGap(21, 21, 21))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jButton1)
+                .addComponent(jButtonSair)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(55, 55, 55)
@@ -114,7 +114,7 @@ public class TelaAdmin extends javax.swing.JFrame {
                     .addComponent(jButtonClientes)
                     .addComponent(jButtonVeiculos)
                     .addComponent(jButtonFinancas)
-                    .addComponent(jButton2))
+                    .addComponent(jButtonReservas))
                 .addContainerGap(89, Short.MAX_VALUE))
         );
 
@@ -156,16 +156,16 @@ public class TelaAdmin extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_jButtonVeiculosActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jButtonSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSairActionPerformed
         dispose();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_jButtonSairActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void jButtonReservasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonReservasActionPerformed
         TelaListaReservas telaR = new TelaListaReservas();
         telaR.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         telaR.setVisible(true);
         dispose();
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_jButtonReservasActionPerformed
 
     /**
      * @param args the command line arguments
@@ -204,10 +204,10 @@ public class TelaAdmin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButtonClientes;
     private javax.swing.JButton jButtonFinancas;
+    private javax.swing.JButton jButtonReservas;
+    private javax.swing.JButton jButtonSair;
     private javax.swing.JButton jButtonVeiculos;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;

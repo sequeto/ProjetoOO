@@ -45,7 +45,7 @@ public class TelaCadastroCliente extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jComboBoxTipoPessoa = new javax.swing.JComboBox<>();
         jButtonCadastra = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        jButtonCancelar = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -56,21 +56,33 @@ public class TelaCadastroCliente extends javax.swing.JFrame {
 
         jLabel3.setText("CPF/CNPJ:");
 
-        jTextFieldNomeC.setText("Digite seu nome");
+        jTextFieldNomeC.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTextFieldNomeCMouseClicked(evt);
+            }
+        });
         jTextFieldNomeC.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldNomeCActionPerformed(evt);
             }
         });
 
-        jTextFieldTelefoneC.setText("Digite seu telefone");
+        jTextFieldTelefoneC.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTextFieldTelefoneCMouseClicked(evt);
+            }
+        });
         jTextFieldTelefoneC.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldTelefoneCActionPerformed(evt);
             }
         });
 
-        jTextFieldCpfCnpj.setText("Digite seu CPF ou CNPJ");
+        jTextFieldCpfCnpj.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTextFieldCpfCnpjMouseClicked(evt);
+            }
+        });
         jTextFieldCpfCnpj.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldCpfCnpjActionPerformed(evt);
@@ -93,10 +105,10 @@ public class TelaCadastroCliente extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setText("Cancelar");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        jButtonCancelar.setText("Cancelar");
+        jButtonCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                jButtonCancelarActionPerformed(evt);
             }
         });
 
@@ -126,7 +138,7 @@ public class TelaCadastroCliente extends javax.swing.JFrame {
                                 .addComponent(jTextFieldTelefoneC, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)))
                         .addGroup(layout.createSequentialGroup()
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jButton2)
+                                .addComponent(jButtonCancelar)
                                 .addComponent(jLabel4))
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -160,7 +172,7 @@ public class TelaCadastroCliente extends javax.swing.JFrame {
                     .addComponent(jComboBoxTipoPessoa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
+                    .addComponent(jButtonCancelar)
                     .addComponent(jButtonCadastra))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -168,9 +180,9 @@ public class TelaCadastroCliente extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void jButtonCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCancelarActionPerformed
         dispose();
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_jButtonCancelarActionPerformed
 
     private void jTextFieldNomeCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldNomeCActionPerformed
         // TODO add your handling code here:
@@ -213,6 +225,18 @@ public class TelaCadastroCliente extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldCpfCnpjActionPerformed
 
+    private void jTextFieldNomeCMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextFieldNomeCMouseClicked
+    
+    }//GEN-LAST:event_jTextFieldNomeCMouseClicked
+
+    private void jTextFieldTelefoneCMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextFieldTelefoneCMouseClicked
+      
+    }//GEN-LAST:event_jTextFieldTelefoneCMouseClicked
+
+    private void jTextFieldCpfCnpjMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextFieldCpfCnpjMouseClicked
+       
+    }//GEN-LAST:event_jTextFieldCpfCnpjMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -249,8 +273,8 @@ public class TelaCadastroCliente extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButtonCadastra;
+    private javax.swing.JButton jButtonCancelar;
     private javax.swing.JComboBox<String> jComboBoxTipoPessoa;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

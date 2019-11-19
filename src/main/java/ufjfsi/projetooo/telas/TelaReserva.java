@@ -36,8 +36,8 @@ public class TelaReserva extends javax.swing.JFrame {
                 lista2.addElement(i);
             }
         }
-        jList1.setModel(lista2);
-        jList2.setModel(lista);
+        jListID.setModel(lista2);
+        jListVeiculosDisp.setModel(lista);
 
     }
 
@@ -66,9 +66,9 @@ public class TelaReserva extends javax.swing.JFrame {
         label1 = new java.awt.Label();
         label2 = new java.awt.Label();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList<>();
+        jListID = new javax.swing.JList<>();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jList2 = new javax.swing.JList<>();
+        jListVeiculosDisp = new javax.swing.JList<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -92,7 +92,7 @@ public class TelaReserva extends javax.swing.JFrame {
 
         jLabel1.setText("Período");
 
-        jTextFieldPeriodo.setText("Período de reserva");
+        jTextFieldPeriodo.setText("Período de reserva(em dias)");
         jTextFieldPeriodo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldPeriodoActionPerformed(evt);
@@ -126,19 +126,19 @@ public class TelaReserva extends javax.swing.JFrame {
 
         label2.setText("Veiculos Disponiveis");
 
-        jList1.setModel(new javax.swing.AbstractListModel<String>() {
+        jListID.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
-        jScrollPane1.setViewportView(jList1);
+        jScrollPane1.setViewportView(jListID);
 
-        jList2.setModel(new javax.swing.AbstractListModel<String>() {
+        jListVeiculosDisp.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
-        jScrollPane2.setViewportView(jList2);
+        jScrollPane2.setViewportView(jListVeiculosDisp);
 
         javax.swing.GroupLayout jPanelReservaLayout = new javax.swing.GroupLayout(jPanelReserva);
         jPanelReserva.setLayout(jPanelReservaLayout);
@@ -320,13 +320,13 @@ public class TelaReserva extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButtonReservar;
-    private javax.swing.JComboBox<String> jComboBoxTipoCliente;
+    public javax.swing.JComboBox<String> jComboBoxTipoCliente;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabelCliente1;
     private javax.swing.JLabel jLabelTipoCliente;
     private javax.swing.JLabel jLabelVeículo1;
-    private javax.swing.JList<String> jList1;
-    private javax.swing.JList<String> jList2;
+    private javax.swing.JList<String> jListID;
+    private javax.swing.JList<String> jListVeiculosDisp;
     private javax.swing.JPanel jPanelReserva;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;

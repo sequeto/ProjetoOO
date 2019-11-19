@@ -32,7 +32,7 @@ public class TelaFrota extends javax.swing.JFrame {
 
         }
         jListListaVeic.setModel(lista);
-        jList1.setModel(lista2);
+        jListID.setModel(lista2);
         if (frota.isEmpty()) {
             jButtonExcluirVeic.setEnabled(false);
 
@@ -51,17 +51,17 @@ public class TelaFrota extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanelListVeic = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
+        jScrollPaneListaDeCarros = new javax.swing.JScrollPane();
         jListListaVeic = new javax.swing.JList<>();
         jLabel1 = new javax.swing.JLabel();
         jPanelAcoesVeic = new javax.swing.JPanel();
         jButtonCadastrarVeic = new javax.swing.JButton();
         jButtonExcluirVeic = new javax.swing.JButton();
         jButtonVoltarFrota = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        jButtonVerCarro = new javax.swing.JButton();
         label2 = new java.awt.Label();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList<>();
+        jListID = new javax.swing.JList<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -70,7 +70,7 @@ public class TelaFrota extends javax.swing.JFrame {
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
-        jScrollPane1.setViewportView(jListListaVeic);
+        jScrollPaneListaDeCarros.setViewportView(jListListaVeic);
 
         jLabel1.setText("Carros:");
 
@@ -81,7 +81,7 @@ public class TelaFrota extends javax.swing.JFrame {
             .addGroup(jPanelListVeicLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanelListVeicLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPaneListaDeCarros, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -90,7 +90,7 @@ public class TelaFrota extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelListVeicLayout.createSequentialGroup()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPaneListaDeCarros, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(22, Short.MAX_VALUE))
         );
 
@@ -115,10 +115,10 @@ public class TelaFrota extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setText("Ver Carro");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jButtonVerCarro.setText("Ver Carro");
+        jButtonVerCarro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jButtonVerCarroActionPerformed(evt);
             }
         });
 
@@ -133,7 +133,7 @@ public class TelaFrota extends javax.swing.JFrame {
                         .addComponent(jButtonExcluirVeic, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButtonCadastrarVeic, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE))
                     .addComponent(jButtonVoltarFrota, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButtonVerCarro, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
         jPanelAcoesVeicLayout.setVerticalGroup(
@@ -144,7 +144,7 @@ public class TelaFrota extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButtonExcluirVeic)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton1)
+                .addComponent(jButtonVerCarro)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButtonVoltarFrota)
                 .addGap(25, 25, 25))
@@ -152,12 +152,12 @@ public class TelaFrota extends javax.swing.JFrame {
 
         label2.setText("ID");
 
-        jList1.setModel(new javax.swing.AbstractListModel<String>() {
+        jListID.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
-        jScrollPane2.setViewportView(jList1);
+        jScrollPane2.setViewportView(jListID);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -217,14 +217,14 @@ public class TelaFrota extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_jButtonVoltarFrotaActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jButtonVerCarroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVerCarroActionPerformed
 
         TelaVerVeiculo telaCadV = new TelaVerVeiculo();
         telaCadV.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         telaCadV.setVisible(true);
 
         dispose();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_jButtonVerCarroActionPerformed
 
     /**
      * @param args the command line arguments
@@ -262,17 +262,17 @@ public class TelaFrota extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButtonCadastrarVeic;
     private javax.swing.JButton jButtonExcluirVeic;
+    private javax.swing.JButton jButtonVerCarro;
     private javax.swing.JButton jButtonVoltarFrota;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JList<String> jList1;
+    private javax.swing.JList<String> jListID;
     private javax.swing.JList<String> jListListaVeic;
     private javax.swing.JPanel jPanelAcoesVeic;
     private javax.swing.JPanel jPanelListVeic;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPaneListaDeCarros;
     private java.awt.Label label2;
     // End of variables declaration//GEN-END:variables
 }

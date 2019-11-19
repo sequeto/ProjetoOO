@@ -57,7 +57,6 @@ public class TelaVerVeiculo extends javax.swing.JFrame {
         jTextFieldCor = new javax.swing.JTextField();
         jLabelAno = new javax.swing.JLabel();
         jTextFieldAno = new javax.swing.JTextField();
-        jButtonCadastraV = new javax.swing.JButton();
         label1 = new java.awt.Label();
         jButton1 = new javax.swing.JButton();
         jTextField1 = new javax.swing.JTextField();
@@ -100,13 +99,6 @@ public class TelaVerVeiculo extends javax.swing.JFrame {
             }
         });
 
-        jButtonCadastraV.setText("Cadastrar");
-        jButtonCadastraV.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonCadastraVActionPerformed(evt);
-            }
-        });
-
         label1.setText("Valor");
 
         jButton1.setText("Voltar");
@@ -132,15 +124,14 @@ public class TelaVerVeiculo extends javax.swing.JFrame {
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButton1)
-                        .addGap(111, 111, 111)
-                        .addComponent(jButtonCadastraV))
                     .addComponent(jTextFieldPlaca)
                     .addComponent(jTextFieldModelo)
                     .addComponent(jTextFieldCor)
                     .addComponent(jTextFieldAno, javax.swing.GroupLayout.DEFAULT_SIZE, 307, Short.MAX_VALUE)
-                    .addComponent(jTextField1))
+                    .addComponent(jTextField1)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(93, 93, 93)
+                        .addComponent(jButton1)))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -166,11 +157,9 @@ public class TelaVerVeiculo extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButtonCadastraV)
-                    .addComponent(jButton1))
-                .addGap(27, 27, 27))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton1)
+                .addGap(26, 26, 26))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -208,10 +197,6 @@ public class TelaVerVeiculo extends javax.swing.JFrame {
     private void jTextFieldAnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldAnoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldAnoActionPerformed
-
-    private void jButtonCadastraVActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCadastraVActionPerformed
-
-    }//GEN-LAST:event_jButtonCadastraVActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         TelaFrota telaC = new TelaFrota();
@@ -258,7 +243,6 @@ public class TelaVerVeiculo extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButtonCadastraV;
     private javax.swing.JLabel jLabelAno;
     private javax.swing.JLabel jLabelCor;
     private javax.swing.JLabel jLabelModelo;

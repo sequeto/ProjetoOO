@@ -34,13 +34,13 @@ public class TelaListaReservas extends javax.swing.JFrame {
             lista.addElement(reserva.get(i).getClienteFis().getNome());
             lista2.addElement(reserva.get(i).getVeiculo().getModelo());
             lista3.addElement(i);
-            lista4.addElement(reserva.get(i).getPeriodo());
+            lista4.addElement(reserva.get(i).getPeriodo() + " dias");
 
         }
         jListListaDeReserva.setModel(lista);
-        jList1.setModel(lista2);
-        jList3.setModel(lista3);
-        jList2.setModel(lista4);
+        jListVeiculos.setModel(lista2);
+        jListID.setModel(lista3);
+        jListTempo.setModel(lista4);
         if (frota.isEmpty() || clientesFis.isEmpty()) {
             jButtonRealizarReserva.setEnabled(false);
         } else {
@@ -67,11 +67,11 @@ public class TelaListaReservas extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jListListaDeReserva = new javax.swing.JList<>();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList<>();
+        jListVeiculos = new javax.swing.JList<>();
         jScrollPane3 = new javax.swing.JScrollPane();
-        jList2 = new javax.swing.JList<>();
+        jListTempo = new javax.swing.JList<>();
         jScrollPane4 = new javax.swing.JScrollPane();
-        jList3 = new javax.swing.JList<>();
+        jListID = new javax.swing.JList<>();
         label1 = new java.awt.Label();
         label2 = new java.awt.Label();
         label3 = new java.awt.Label();
@@ -90,26 +90,26 @@ public class TelaListaReservas extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(jListListaDeReserva);
 
-        jList1.setModel(new javax.swing.AbstractListModel<String>() {
+        jListVeiculos.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
-        jScrollPane2.setViewportView(jList1);
+        jScrollPane2.setViewportView(jListVeiculos);
 
-        jList2.setModel(new javax.swing.AbstractListModel<String>() {
+        jListTempo.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
-        jScrollPane3.setViewportView(jList2);
+        jScrollPane3.setViewportView(jListTempo);
 
-        jList3.setModel(new javax.swing.AbstractListModel<String>() {
+        jListID.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
-        jScrollPane4.setViewportView(jList3);
+        jScrollPane4.setViewportView(jListID);
 
         label1.setText("ID:");
 
@@ -244,6 +244,10 @@ public class TelaListaReservas extends javax.swing.JFrame {
     private void jButtonExcluirReservaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonExcluirReservaActionPerformed
         int resposta = Integer.parseInt(JOptionPane.showInputDialog(null, "digite o ID da reserva a ser removida"));
         reserva.remove(resposta);
+        TelaListaReservas telaLR = new TelaListaReservas();
+        telaLR.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        telaLR.setVisible(true);
+        dispose();
 
     }//GEN-LAST:event_jButtonExcluirReservaActionPerformed
 
@@ -286,10 +290,10 @@ public class TelaListaReservas extends javax.swing.JFrame {
     private javax.swing.JButton jButtonExcluirReserva;
     private javax.swing.JButton jButtonRealizarReserva;
     private javax.swing.JButton jButtonVoltar;
-    private javax.swing.JList<String> jList1;
-    private javax.swing.JList<String> jList2;
-    private javax.swing.JList<String> jList3;
+    private javax.swing.JList<String> jListID;
     private javax.swing.JList<String> jListListaDeReserva;
+    private javax.swing.JList<String> jListTempo;
+    private javax.swing.JList<String> jListVeiculos;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanelReserva;
     private javax.swing.JScrollPane jScrollPane1;
